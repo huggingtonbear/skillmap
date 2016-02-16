@@ -9,13 +9,17 @@ body {
 h1,h2,h3,h4,h5 {
   font-weight: 300;
 }
-
+.progress {
+    height: 30px;
+}
 .controls{
   padding: 2%;
   background: #333;
   color: #eee;
 }
-
+.btn-primary {
+  border: solid #68A0D0 4px;
+}
 .well-lg {
     -webkit-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
     -moz-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
