@@ -4,8 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  background: url('http://www.wired.com/wp-content/uploads/2015/02/120726-GOOGLE-CAMPUS-ft.jpg');
-  background-size: cover;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5 {
+  font-weight: 300;
 }
 
 .controls{
@@ -15,7 +17,6 @@ body {
 }
 
 .well-lg {
-  background: rgba(255,255,255,0.6);
     -webkit-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
     -moz-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
     -o-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
@@ -31,17 +32,14 @@ body {
 .panel-default>.panel-heading.programming-skills {
     color: #FFF;
     background-color: #A75C8C;
-    border-color: #ddd;
 }
 .panel-default>.panel-heading.design-skills {
     color: #FFF;
-    background-color: #52579E;
-    border-color: #ddd;
+    background-color: #52579E;  
 }
 .panel-default>.panel-heading.ios-skills {
     color: #FFF;
     background-color: #14B8D0;
-    border-color: #ddd;
 }
 
 label{
@@ -97,17 +95,24 @@ button + label{
   background: #03899c;
   margin-bottom: 2%;
   display: none;
+  border-radius: 4px;
+}
+.skill-map .mix:hover{
+  border: solid #000 4px;
 }
 
 .skill-map .mix.programming-skills{
   background-color: #A75C8C;
+  border: solid #CA9AB8 4px;
 }
 
 .skill-map .mix.ios-skills{
   background-color: #14B8D0;
+  border: solid #94D8E2 4px;
 }
 .skill-map .mix.design-skills{
   background-color: #52579E;
+  border: solid #9599D4 4px;
 }
 .skill-map .mix:after{
   content: attr(data-name);
@@ -137,4 +142,14 @@ button + label{
 
 .skill-map.list .mix:before{
   padding-top: 40px;
+}
+
+a.mix:hover {
+  border: solid rgba(255,255,255,0.6) 4px !important;
+}
+a.mix:focus {
+    -webkit-box-shadow: inset 0px 0px 7px 1px rgba(117,117,117,0.7) !important;
+    -moz-box-shadow: inset 0px 0px 7px 1px rgba(117,117,117,0.7) !important;
+    box-shadow: inset 0px 0px 7px 1px rgba(117,117,117,0.7) !important;
+  border: solid rgba(0,0,0,0.1) 4px !important;
 }
