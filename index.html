@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"> <span class="glyphicon glyphicon-equalizer mr5" aria-hidden="true"></span> Skill Map Prototype</a>
+          <a class="navbar-brand" href="#"> Skill Map Prototype</a>
         </div>
       </div>
     </nav>
@@ -60,7 +60,7 @@
                 <li><a href="#" class="filter" data-filter=".design-skills">Design</a></li>
                 <li><a href="#" class="filter" data-filter=".ios-skills">iOS</a></li>
                 <li><a href="#" class="filter" data-filter=".programming-skills">Programming</a></li>
-                <li><a href="#" id="ChangeLayout">Grid</a></li>
+                <li><a href="#" id="ChangeLayout"> Show Path</a></li>
               </ul>
               <!-- HIDDEN SORT FEATURES -->
               <!-- <ul class="nav navbar-nav">
@@ -713,7 +713,7 @@
               easing: 'cubic-bezier(0.47, 0, 0.745, 0.715)'
             },
             layout: {
-              containerClass: 'list' // Add the class 'list' to the container on load
+              containerClass: 'grid' // Add the class 'list' to the container on load
             }
           });          
           // MixItUp does not provide a default "change layout" button, so we need to make our own and bind it with a click handler:
@@ -722,10 +722,10 @@
             
             // If the current layout is a list, change to grid:
             
-            if(layout == 'list'){
-              layout = 'grid';
+            if(layout == 'grid'){
+              layout = 'list';
               
-              $changeLayout.text('List'); // Update the button text
+              $changeLayout.text('Show Map'); // Update the button text
               
               $container.mixItUp('changeLayout', {
                 containerClass: layout // change the container class to "grid"
@@ -734,9 +734,9 @@
             // Else if the current layout is a grid, change to list:  
             
             } else {
-              layout = 'list';
+              layout = 'grid';
               
-              $changeLayout.text('Grid'); // Update the button text
+              $changeLayout.text('Show Path'); // Update the button text
               
               $container.mixItUp('changeLayout', {
                 containerClass: layout // Change the container class to 'list'

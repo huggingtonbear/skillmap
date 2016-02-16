@@ -125,7 +125,7 @@ button + label{
   display: inline-block;
   vertical-align: top;
   padding: 4% 6%;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .skill-map .mix:before{
