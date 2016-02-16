@@ -1,0 +1,140 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.controls{
+  padding: 2%;
+  background: #333;
+  color: #eee;
+}
+
+.well-lg {
+    -webkit-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -o-transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    transition: all 800ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+}
+.panel-default>.panel-heading {
+  padding: 20px;
+}
+.panel-default>.panel-heading.programming-skills {
+    color: #FFF;
+    background-color: #A75C8C;
+    border-color: #ddd;
+}
+.panel-default>.panel-heading.design-skills {
+    color: #FFF;
+    background-color: #52579E;
+    border-color: #ddd;
+}
+.panel-default>.panel-heading.ios-skills {
+    color: #FFF;
+    background-color: #14B8D0;
+    border-color: #ddd;
+}
+
+label{
+  font-weight: 300;
+  margin: 0 .4em 0 0;
+}
+
+button{
+  display: inline-block;
+  padding: .4em .8em;
+  background: #666;
+  border: 0;
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.active{
+  background: #68b8c4;
+}
+
+button:focus{
+  outline: 0 none;
+}
+
+button + label{
+  margin-left: 1em;
+}
+
+.skill-map{
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;  
+  -webkit-backface-visibility: hidden;
+}
+
+.skill-map:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.skill-map .mix,
+.skill-map .gap{
+  display: inline-block;
+  width: 49%;
+}
+
+.skill-map .mix{
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 2%;
+  display: none;
+}
+
+.skill-map .mix.programming-skills{
+  background-color: #A75C8C;
+}
+
+.skill-map .mix.ios-skills{
+  background-color: #14B8D0;
+}
+.skill-map .mix.design-skills{
+  background-color: #52579E;
+}
+.skill-map .mix:after{
+  content: attr(data-name);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+.skill-map .mix:before{
+  content: '';
+  display: inline-block;
+  padding-top: 60%;
+}
+
+@media all and (min-width: 420px){
+  .skill-map .mix,
+  .skill-map .gap{
+    width: 32%;
+  }
+}
+
+/**
+ * List Styles
+ */
+
+.skill-map.list .mix{
+  width: 100%;
+}
+
+.skill-map.list .mix:before{
+  padding-top: 40px;
+}
