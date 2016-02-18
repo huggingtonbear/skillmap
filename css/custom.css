@@ -17,6 +17,23 @@ h1,h2,h3,h4,h5 {
   background: #333;
   color: #eee;
 }
+.skill-status {
+  font-size: 28px;
+  color: rgba(255,255,255,0.5);
+  padding-right: 15px;
+  float: right;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+.skill-card-name {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  float: left;
+  color: white;
+  font-weight: 500;
+}
 .btn-primary {
   border: solid #68A0D0 4px;
 }
@@ -81,7 +98,18 @@ button + label{
   font-size: 0.1px;  
   -webkit-backface-visibility: hidden;
 }
-
+.skill-map .mix.programming-skills.incomplete {
+  background-color: #693355;
+  border: solid #9C6989 4px;
+}
+.skill-map .mix.ios-skills.incomplete {
+  background-color: #198494;
+  border: solid #76B1B9 4px;
+}
+.skill-map .mix.design-skills.incomplete {
+  background-color: #292D5F;
+  border: solid #5D619C 4px;
+}
 .skill-map:after{
   content: '';
   display: inline-block;
@@ -119,7 +147,7 @@ button + label{
   border: solid #9599D4 4px;
 }
 .skill-map .mix:after{
-  content: attr(data-name);
+/*  content: attr(data-name);*/
   color: white;
   font-size: 16px;
   display: inline-block;
@@ -131,7 +159,7 @@ button + label{
 .skill-map .mix:before{
   content: '';
   display: inline-block;
-  padding-top: 60%;
+  padding-top: 40%;
 }
 
 @media all and (min-width: 420px){
