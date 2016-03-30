@@ -11,7 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -33,702 +33,71 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"> Skill Map Prototype</a>
+          <a class="navbar-brand" href="#">Packt</a>
         </div>
       </div>
     </nav>
 
     <div class="container mt60">
-      <div class="col-sm-12">
-        <h2><a href="profile.html" class="btn btn-default pull-left mr20"> <span class="glyphicon glyphicon-arrow-left mr5" aria-hidden="true"></span> Back to Profile</a>iOS Developer for Google<a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-user mr5" aria-hidden="true"></span> More about this Job</a></h2>
+      <h1> Skill Sort</h1>
+      <hr class="mt0">
+      <div class="col-sm-4">
+        <h3>To Do</h3>
         <hr>
-      </div>
-
-      <!-- Main component for a primary marketing message or call to action -->
-      
-      <div class="col-sm-7">
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#" class="disabled">Filter Skills:</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="#" class="filter" data-filter="all">All</a></li>
-                <li><a href="#" class="filter" data-filter=".design-skills">Design</a></li>
-                <li><a href="#" class="filter" data-filter=".ios-skills">iOS</a></li>
-                <li><a href="#" class="filter" data-filter=".programming-skills">Programming</a></li>
-                <li><a href="#" id="ChangeLayout"> Show Path</a></li>
-              </ul>
-              <!-- HIDDEN SORT FEATURES -->
-              <!-- <ul class="nav navbar-nav">
-                <a class="navbar-brand ml15" href="#">Sort:</a>
-                <li><a href="#" class="sort" data-sort="myorder:asc">Asc</a></li>
-                <li><a href="#" class="sort" data-sort="myorder:desc">Desc</a></li>
-              </ul> -->
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-
-        <div id="Skill-map" class="skill-map">
-          <a href="#ux" aria-controls="ux" role="tab" data-toggle="tab" class="mix design-skills" data-skill="design-skills" data-myorder="1" data-name="UX & UI">
-            <span class="skill-card-name ml5" aria-hidden="true">User Experience & UI
-            </span>
-            <span class="glyphicon glyphicon-expand skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#iossdkintroduction" aria-controls="iossdkintroduction" role="tab" data-toggle="tab"  class="mix ios-skills" data-skill="design-ios" data-myorder="1" data-name="iOS SDK Introduction">
-            <span class="skill-card-name ml5" aria-hidden="true">iOS SDK Introduction
-            </span>
-            <span class="glyphicon glyphicon-expand skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#programmingbasics" aria-controls="programmingbasics" role="tab" data-toggle="tab" class="mix programming-skills " data-skill="programming-skills" data-myorder="1" data-name="Programming Basics">
-          <span class="skill-card-name ml5" aria-hidden="true">Programming Basics
-            </span>
-            <span class="glyphicon glyphicon-check skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#uiconceptsanddesignbasics" aria-controls="uiconceptsanddesignbasics" role="tab" data-toggle="tab"  class="mix design-skills incomplete" data-skill="design-skills" data-myorder="2" data-name="UI Concepts & Design Basics">
-            <span class="skill-card-name ml5" aria-hidden="true">UI Concepts & Design Basics
-            </span>
-            <span class="glyphicon glyphicon-unchecked skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#nextstepswiththesdk" aria-controls="nextstepswiththesdk" role="tab" data-toggle="tab"  class="mix ios-skills incomplete" data-skill="ios-skills" data-myorder="2" data-name="Next Steps with the SDK">
-            <span class="skill-card-name ml5" aria-hidden="true">Next Steps with the SDK
-            </span>
-            <span class="glyphicon glyphicon-unchecked skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#swiftbasics" aria-controls="swiftbasics" role="tab" data-toggle="tab" class="mix programming-skills incomplete" data-skill="progrmaming-skills" data-myorder="2" data-name="Swift Basics">
-            <span class="skill-card-name ml5" aria-hidden="true">Learning Swift Basics
-            </span>
-            <span class="glyphicon glyphicon-unchecked skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#rapidprototyping" aria-controls="rapidprototyping" role="tab" data-toggle="tab"  class="mix design-skills incomplete" data-myorder="3" data-skill="design-skills" data-name="Rapid Prototyping">
-            <span class="skill-card-name ml5" aria-hidden="true">Rapid Prototyping
-            </span>
-            <span class="glyphicon glyphicon-unchecked skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#iosapisindepth" aria-controls="iosapisindepth" role="tab" data-toggle="tab"  class="mix ios-skills incomplete" data-skill="ios-skills" data-myorder="3" data-name="iOS APIs in Depth">
-            <span class="skill-card-name ml5" aria-hidden="true">iOS APIs in Depth
-            </span>
-            <span class="glyphicon glyphicon-unchecked skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#advancedswiftfeatures" aria-controls="advancedswiftfeatures" role="tab" data-toggle="tab"  class="mix programming-skills incomplete" data-skill="programming-skills" data-myorder="3" data-name="Advanced Swift Features">
-            <span class="skill-card-name ml5" aria-hidden="true">Advanced Swift Features
-            </span>
-            <span class="glyphicon glyphicon-unchecked skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-          <a href="#highperformanceswift" aria-controls="highperformanceswift" role="tab" data-toggle="tab"  class="mix programming-skills incomplete pull-right" data-skill="programming-skills" data-myorder="4" data-name="High Performance Swift Programming">
-            <span class="skill-card-name ml5" aria-hidden="true">High Performance Swift Programming
-            </span>
-            <span class="glyphicon glyphicon-unchecked skill-status ml5" aria-hidden="true">
-            </span>
-          </a>
-
-          
-          <div class="gap"></div>
-          <div class="gap"></div>
+        <div class="well text-center">
+          <h3 class="mt80 pl10 pr10">Mark the items you know on the card</h3>
+          <i class="fa fa-hand-o-right fa-3x"></i>
         </div>
       </div>
-      <div class="col-sm-5">
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="home">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><strong>Job Description</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <h4>Responsibilities:</h4>
-                  <ul>
-                    <li>Design and implement new user-facing features in Google’s large, complex mobile applications.</li>
-                    <li>Build the libraries and frameworks that support authentication, copresence, and cutting-edge network protocols.</li>
-                    <li>Optimize mobile applications on the iOS platform.</li>
-                    <li>Develop prototypes quickly.</li>
-                  </ul>
-                  <h4 class="mt25">Minimum qualifications:</h4>
-                  <ul>
-                    <li>BS degree in Computer Science or a similar technical field of study, or equivalent practical experience.</li>
-                    <li>Software development experience in Objective-C using iOS or OS X frameworks.</li>
-                    <li>Working proficiency and communication skills in verbal and written English.</li>
-                  </ul>
-                  <h4 class="mt25">Preferred qualifications:</h4>
-                  <ul>
-                    <li>Experience with one or more general purpose programming languages including but not limited to: Java, C/C++, C#, Python, JavaScript, Go, or Swift.</li>
-                    <li>Knowledge of the iOS SDK performance tools and optimization techniques.</li>
-                    <li>Interest and ability to learn other programming languages as needed.</li>
-                  </ul>
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25"> <span class="glyphicon glyphicon-search mr10" aria-hidden="true"></span> Find out more</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="ux">
-              <div class="panel panel-default">
-                <div class="panel-heading design-skills">
-                  <h3 class="panel-title"><strong>UX & UI</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar ux progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:20%">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" checked>Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="programmingbasics">
-              <div class="panel panel-default">
-                <div class="panel-heading programming-skills">
-                  <h3 class="panel-title"><strong>Programming Basics</strong><span class="glyphicon glyphicon-check pull-right" aria-hidden="true"></span></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-                    </div>
-                  </div>
-                  <p>The significance of code literacy in contemporary culture is about more than personal lifestyle choices. We are all now immersed, if not in code itself, then in the effects of code on everything around us.
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="0" checked>Variables
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="0" checked>Control Structures
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="0" checked>Data Structures
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="0" checked>Syntax
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="0" checked>Tools
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> Earning over $20,000 require knowledge of programming</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/3262OS.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/featured_book_block/cover.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/5845OS_2951_Scala%20Functional%20Programming%20Patterns.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="swiftbasics">
-              <div class="panel panel-default">
-                <div class="panel-heading programming-skills">
-                  <h3 class="panel-title"><strong>Swift Basics</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="iossdkintroduction">
-              <div class="panel panel-default">
-                <div class="panel-heading ios-skills">
-                  <h3 class="panel-title"><strong>iOS SDK Introduction</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="0" checked>Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="0" checked>Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="nextstepswiththesdk">
-              <div class="panel panel-default">
-                <div class="panel-heading ios-skills">
-                  <h3 class="panel-title"><strong>Next Steps with the SDK</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="iosapisindepth">
-              <div class="panel panel-default">
-                <div class="panel-heading ios-skills">
-                  <h3 class="panel-title"><strong>iOS APIs in Depth</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="advancedswiftfeatures">
-              <div class="panel panel-default">
-                <div class="panel-heading programming-skills">
-                  <h3 class="panel-title"><strong>Advanced Swift Features</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <h4>What you'll Learn:</h4>
-                  <ul>
-                    <li>Design and implement new user-facing features in Google’s large, complex mobile applications.</li>
-                    <li>Build the libraries and frameworks that support authentication, copresence, and cutting-edge network protocols.</li>
-                    <li>Optimize mobile applications on the iOS platform.</li>
-                    <li>Develop prototypes quickly.</li>
-                  </ul>
-                  <h4 class="mt25">Minimum qualifications:</h4>
-                  <ul>
-                    <li>BS degree in Computer Science or a similar technical field of study, or equivalent practical experience.</li>
-                    <li>Software development experience in Objective-C using iOS or OS X frameworks.</li>
-                    <li>Working proficiency and communication skills in verbal and written English.</li>
-                  </ul>
-                  <h4 class="mt25">Preferred qualifications:</h4>
-                  <ul>
-                    <li>Experience with one or more general purpose programming languages including but not limited to: Java, C/C++, C#, Python, JavaScript, Go, or Swift.</li>
-                    <li>Knowledge of the iOS SDK performance tools and optimization techniques.</li>
-                    <li>Interest and ability to learn other programming languages as needed.</li>
-                  </ul>
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Find out more</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="uiconceptsanddesignbasics">
-              <div class="panel panel-default">
-                <div class="panel-heading design-skills">
-                  <h3 class="panel-title"><strong>UI Concepts & Design Basics</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="rapidprototyping">
-              <div class="panel panel-default">
-                <div class="panel-heading design-skills">
-                  <h3 class="panel-title"><strong>Rapid Prototyping</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="highperformanceswift">
-              <div class="panel panel-default">
-                <div class="panel-heading programming-skills">
-                  <h3 class="panel-title"><strong>High Performance Swift Programming</strong></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                  </div>
-                  <p>When most people think about design, their minds automatically go to the artistic elements of design — things like shape, color, and balance. But the beauty of great design goes much deeper than simple appearance. 
-                  </p>
-                  <h4 class="mt25">Core Learning:</h4>
-                  <ul>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Fundamental Design Principles
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Wireframing
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Page Framework
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Colour
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input id="input1" type="checkbox" name="completed1" value="20" value="">Design Patterns
-                    </label>
-                  </div>
-                  </ul>
-                  <div class="alert alert-success mt25" role="alert"><span class="glyphicon glyphicon-thumbs-up mr5" aria-hidden="true"></span> 80% of people with these skills earn over $40,000 a year</div>   
-                  <h4 class="mt25 mb15">Recommended Courses</h4>
-                  <div class="col-sm-4">
-                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781784392130.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B04955_MockupCover_Normal.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2984OT_cov.jpg" class="img-responsive"/>
-                  </div>
-                  <div class="clearfix">
-                  </div>
-
-                  <a href="https://www.google.com/about/careers" class="btn btn-primary btn-lg btn-block mt25">Continue Learning</a>
-                </div>
-              </div>
-            </div>
-
-
-
-
+      <div class="col-sm-4">
+        <h3 class="text-center mb40"><i class="fa fa-file-text"></i> 1/9</h3>
+        <div class="faux-panel faux-2nd">
+        </div>
+        <div class="faux-panel faux-1st">
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Reactive Java Programming</h3>
+            <p>Reactive programming is a paradigm that allows you to write fast, concurrent and powerful applications</p>
+            <br/>
+            <h4>What do you know?</h4>
+            <hr>
+            <p><input type="checkbox" class="check-round mr5" checked="">CSS3 Media Queries</p>
+            <p><input type="checkbox" class="check-round mr5">AngularJS Interface Directives</p>
+            <p><input type="checkbox" class="check-round mr5">Optimizing AngularJS</p>
+            <p><input type="checkbox" class="check-round mr5">Exploring Modern CSS</p>
+<!--             <p><i class="fa fa-check-circle fa-3x  complete"></i>  CSS3 Media Queries</p>
+            <p><a href="#"><i class="fa fa-check-circle-o fa-3x mr5 incomplete"></i></a>  </p>
+            <p><i class="fa fa-check-circle-o fa-3x mr5 incomplete"></i>  </p>
+            <p><i class="fa fa-check-circle-o fa-3x mr5 incomplete"></i>  </p> -->
           </div>
-
-        
+        </div>
+        <a href="#" class="btn btn-primary btn-lg btn-block">Next Card</a>
+      </div>
+      <div class="col-sm-4">
+        <h3>My Progress</h3>
+        <hr>
+        <div class="well text-center">
+          <img src="img/chris.jpg" alt="Chris" class="img-circle mt10">
+          <h4 class="mt20">Chris Murray</h4>
+          <h3>Android Developer</h3>
+          <small>Estimated Income: $110K</small>
+          <div class="progress mt20">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="thumbnail pt20">
+              <i class="fa fa-file-text fa-3x pb10"></i><p><b>4</b></p>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="thumbnail pt20">
+              <i class="fa fa-check-circle fa-3x pb10"></i><p><b>12</b></p>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div> <!-- /container -->
@@ -739,72 +108,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-    <script type="text/javascript">
-       // We will be using MixItUp's 'changeLayout' API method to add and remove a 'list' class to the container. This class changes the styling of our target elements (see CSS).
-  
-         // NB: Changing layout doesn't have to be between grid/list only, we can add any class we want and use it to affect the styling of our elements.
-
-        $(function(){
-
-          var layout = 'list', // Store the current layout as a variable
-              $container = $('#Skill-map'), // Cache the MixItUp container
-              $changeLayout = $('#ChangeLayout'); // Cache the changeLayout button
-
-          
-          // Instantiate MixItUp with some custom options:
-          
-          $container.mixItUp({
-            animation: {
-              animateChangeLayout: true, // Animate the positions of targets as the layout changes
-              animateResizeTargets: true, // Animate the width/height of targets as the layout changes
-              duration: 400,
-              effects: 'fade translateZ(-360px) stagger(98ms)',
-              easing: 'cubic-bezier(0.47, 0, 0.745, 0.715)'
-            },
-            layout: {
-              containerClass: 'grid' // Add the class 'list' to the container on load
-            }
-          });          
-          // MixItUp does not provide a default "change layout" button, so we need to make our own and bind it with a click handler:
-          
-          $changeLayout.on('click', function(){
-            
-            // If the current layout is a list, change to grid:
-            
-            if(layout == 'grid'){
-              layout = 'list';
-              
-              $changeLayout.text('Show Map'); // Update the button text
-              
-              $container.mixItUp('changeLayout', {
-                containerClass: layout // change the container class to "grid"
-              });
-              
-            // Else if the current layout is a grid, change to list:  
-            
-            } else {
-              layout = 'grid';
-              
-              $changeLayout.text('Show Path'); // Update the button text
-              
-              $container.mixItUp('changeLayout', {
-                containerClass: layout // Change the container class to 'list'
-              });
-            }
-          });
-
-          
-        });
-    </script>
-    <script type="text/javascript">
-      $('input').on('click', function() {
-          var emptyValue = 0;
-          $('input:checked').each(function() {
-              emptyValue += parseInt($(this).val());
-          });
-          $('.progress-bar.ux').css('width', emptyValue + '%').attr('aria-valuenow', emptyValue);
-      });
-    </script>
   </body>
 </html>
