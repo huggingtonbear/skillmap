@@ -26,6 +26,13 @@ h1, .h1 {
 .card-icon {
   vertical-align: middle;
 }
+.skill-counter {
+  font-size: 18px;
+}
+.learning-backlog-text, .learning-backlog-text h3 {
+  color: rgba(0,0,0,0.4);
+  font-weight: 700;
+}
 /* Stacked Panels */
 .faux-panel {
     border: 1px solid;
