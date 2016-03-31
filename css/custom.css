@@ -21,7 +21,7 @@ h1, .h1 {
   font-size: 56px;
 }
 .well {
-  min-height: 60%;
+  min-height: 550px;
 }
 .card-icon {
   vertical-align: middle;
