@@ -51,23 +51,18 @@
         <h3>Job Proficiency</h3>
         <hr>
         <div class="well text-center">
-          <img src="img/chris.jpg" style="width:150px;" alt="Chris" class="img-circle mt10">
+          <img src="img/chris.jpg" alt="Chris" style="width:150px;" class="img-circle mt10">
           <h4 class="mt20">Chris Murray</h4>
-          <h3>Android Developer</h3>
+          <h3>Python Developer</h3>
           <small>Estimated Income: $110K</small>
           <div class="progress mt20">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
               <span class="sr-only"></span>
             </div>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-12">
             <div class="thumbnail pt20">
               <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>2/5</b></p>
-            </div>
-          </div>
-          <div class="col-xs-6">
-            <div class="thumbnail pt20">
-              <i class="fa fa-check-circle fa-3x pb10"></i><p class="skill-counter"><b id="count">6</b><b>/19</b></p>
             </div>
           </div>
         </div>
@@ -76,43 +71,46 @@
         <h3 class="text-center mb40"><i class="fa fa-file-text"></i> 5/5</h3>
         <div class="panel panel-default">
           <div class="panel-body">
-            <h3>Android High Performance</h3>
-            <p>Less than 1% of Android devices are running the latest version of Android. In fact, the majority of the devices in circulation are currently using Jellybean or below.</p>
+            <h3>Production Ready Django</h3>
+            <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
+            <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
             <br/>
-            <h4>What do you know?</h4>
+            <h4>Are you able to...</h4>
             <hr>
-            <p><input id="checkbox-global" type="checkbox" class="check-round mr5 checkbox-group" value="60"><b>Select All</b></p>
-            <p><input type="checkbox" class="check-round mr5 checkbox-group" value="70">Thread Model</p>
-            <p><input type="checkbox" class="check-round mr5 checkbox-group" value="4">Apply Concurrency Constructs</p>
-            <p><input type="checkbox" class="check-round mr5 checkbox-group" value="4">Create High Performance Apps</p>
+            <ul class="learning-points">
+            <li>Use common design patterns that can help you write better, more efficient, Django code</li>
+            <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
+            <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
+            <ul>
           </div>
         </div>
-        <a href="index-cardselect4.html" class="btn btn-primary btn-lg btn-block">Sort Card</a>
+        <div class="">
+          <button onclick="window.location.href='index-cardselect4.html'" type="button" class="btn btn-info btn-circle btn-xl pull-left ml15"><i class="glyphicon glyphicon-ok"></i></button>
+          <button onclick="window.location.href='index-cardselect4.html'" type="button" class="btn btn-warning btn-circle btn-xl pull-right mr15"><i class="glyphicon glyphicon-remove"></i></button>
+        </div>
+        <div class="clearfix mb30"></div>
       </div>
-      
       <div class="col-sm-4">
         <h3>What I need to learn...</h3>
         <hr>
         <div class="well text-center">
-
           <div class="panel panel-default">
             <div class="panel-body">
-              <h4><i class="fa fa-mobile fa-2x card-icon mr5"></i> Reactive Java Programming</h4>
-              <small class="pull-right">3/4</small>
+              <h4>Python Fundamentals</h4>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="panel-body">
-              <h4><i class="fa fa-android fa-2x card-icon mr5"></i> Android Development Fundamentals</h4>
-              <small class="pull-right">1/3</small>
+              <h4>High Performance Python</h4>
             </div>
           </div>
           <div class="learning-backlog-text">
-            <h3 class="mt80 pl10 pr10">Mark the items you know on the card</h3>
+            <h3 class="mt80 pl10 pr10">Mark whether or not you know a Card</h3>
             <i class="fa fa-hand-o-left fa-3x"></i>
           </div>
         </div>
       </div>
+      
 
     </div> <!-- /container -->
 
@@ -122,36 +120,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-     <script type="text/javascript">
-         $('input').on('click', function() {
-          var emptyValue = 0;
-          $('input:checked').each(function() {
-              emptyValue += parseInt($(this).val());
-          });
-          $('.progress-bar').css('width', emptyValue + '%').attr('aria-valuenow', emptyValue);
-      });
-    </script>
-    <script type="text/javascript">
-        function updateCheckedCount() {
-        $("#count").html($(".checkbox-group:not(#checkbox-global):checked").length+12);
-    } 
-
-    $("#checkbox-global").on("change", function() {
-        if($(this).is(":checked")) {
-            $(".checkbox-group").attr("checked", "checked");
-        } else {
-            $(".checkbox-group").removeAttr("checked");
-        }
-        updateCheckedCount();
-    });
-
-    $(".checkbox-group").on("change", function() {
-        if(!$("#checkbox-global").is(":checked") && $(".checkbox-group:not(#checkbox-global)").length == $(".checkbox-group:not(#checkbox-global):checked").length) {
-            $("#checkbox-global").attr("checked", "checked");
-        }
-        updateCheckedCount();
-    });
-
-    updateCheckedCount();</script>
   </body>
 </html>
