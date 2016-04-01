@@ -68,9 +68,8 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <h3 class="text-center mt100">You're all set!</h3>
-        <h5 class="text-center mb40">Ready to start learning?</h5>
-        <a href="index-cardselect3.html" class="btn btn-primary btn-lg btn-block">Start Learning</a>
+        <h3 class="text-center mt100 mb20">You're all set!</h3>
+        <a href="dashboard.html" class="btn btn-primary btn-lg btn-block">Start Learning</a>
       </div>
       <div class="col-sm-3">
         <h3>What I need to learn...</h3>
@@ -102,36 +101,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-     <script type="text/javascript">
-         $('input').on('click', function() {
-          var emptyValue = 0;
-          $('input:checked').each(function() {
-              emptyValue += parseInt($(this).val());
-          });
-          $('.progress-bar').css('width', emptyValue + '%').attr('aria-valuenow', emptyValue);
-      });
-    </script>
-    <script type="text/javascript">
-        function updateCheckedCount() {
-        $("#count").html($(".checkbox-group:not(#checkbox-global):checked").length+12);
-    } 
-
-    $("#checkbox-global").on("change", function() {
-        if($(this).is(":checked")) {
-            $(".checkbox-group").attr("checked", "checked");
-        } else {
-            $(".checkbox-group").removeAttr("checked");
-        }
-        updateCheckedCount();
-    });
-
-    $(".checkbox-group").on("change", function() {
-        if(!$("#checkbox-global").is(":checked") && $(".checkbox-group:not(#checkbox-global)").length == $(".checkbox-group:not(#checkbox-global):checked").length) {
-            $("#checkbox-global").attr("checked", "checked");
-        }
-        updateCheckedCount();
-    });
-
-    updateCheckedCount();</script>
   </body>
 </html>

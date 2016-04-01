@@ -42,6 +42,9 @@ a>.panel {
   text-decoration:none;
   color: #333;
 }
+.panel-default.active {
+    border: 1px outset #76B8F1;
+}
 a:hover {
   text-decoration: none;
 }
