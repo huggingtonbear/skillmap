@@ -106,12 +106,10 @@ input.check-round:checked:after, input.check-round:after{
 }
 input.check-round:checked:after {
   content: '\f058';
-  color: #269A26;
   vertical-align: middle;
 }
 input.check-round:after {
   content: '\f05d';
-  color: rgba(0,0,0,0.2);
   vertical-align: middle;
 }
 /* END Font Awesome Checkboxes */
