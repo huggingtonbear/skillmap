@@ -37,21 +37,20 @@
         </div>
       </div>
     </nav>
-
-    <div class="container mt50">
+    <div class="jumbotron heading">
+        <div class="container">
+          <h1> Skill Sort</h1>
+        </div>
+    </div>
+    <div class="container">
       
-      <h1> Skill Sort</h1>
-      <p>Quickly <b>Sort</b> through the Skill Cards to create a bespoke learning plan for your career development</p> 
-      <hr class="mt0 mb5">
-      <ol class="breadcrumb row mt0 mb0">
-        <li><a href="select-career.html">Select Career</a></li>
-        <li><a href="select-role.html">Select Role</a></li>
-        <li class="active">Sort Skills</li>
-      </ol>
+      
+<!--       <p>Quickly <b>Sort</b> through the Skill Cards to create a bespoke learning plan for your career development</p> 
+      <hr class="mt0 mb5"> -->
+      
       <div class="col-sm-3">
-        <h3>Job Proficiency</h3>
-        <hr>
         <div class="well text-center">
+          <h3 class="well-title">Role Progress</h3>
           <img src="img/chris.jpg" alt="Chris" style="max-height:150px;" class="img-circle img-avatar img-responsive mt10">
           <h4 class="mt20">Chris Murray</h4>
           <h3>Python Developer</h3>
@@ -68,14 +67,29 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-3">
+        <div class="well text-center">
+          <h3 class="well-title">What I need to Learn</h3>
+          <div class="learning-backlog-text">
+            <h3 class="mt80 mb15">Mark whether or not you know a Card</h3>
+            <i class="fa fa-hand-o-right fa-3x"></i>
+          </div>
+        </div>
+      </div>
       <div class="col-sm-6">
-        <h3 class="text-center mb40"><i class="fa fa-file-text"></i> 1/5</h3>
+        <div class="alert alert-info alert-dismissable" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          Quickly <strong>Sort</strong> through the Skill Cards to create a bespoke learning plan for your career development
+        </div>
         <div class="faux-panel faux-2nd">
         </div>
         <div class="faux-panel faux-1st">
         </div>
         <div class="panel panel-default">
           <div class="panel-body">
+                    <p class="mb0 card-count"><i class="fa fa-file-text"></i> 1/5</p>
             <h3>Python Fundamentals</h3>
             <!-- <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
             <br/> -->
@@ -91,20 +105,17 @@
           </div>
         </div>
         <div class="">
-          <a href="index-cardselect.html" class="btn btn-success pull-left">I know this<i class="glyphicon glyphicon-ok ml10"></i></a>
-          <a href="index-cardselect.html" class="btn btn-danger pull-right">I don't know this<i class="glyphicon glyphicon-remove ml10"></i></a>
+          <a href="index-cardselect.html" class="btn btn-success pull-left">I know all of this<i class="glyphicon glyphicon-ok ml10"></i></a>
+          <a href="index-cardselect.html" class="btn btn-danger pull-right">I don't know all of this<i class="glyphicon glyphicon-remove ml10"></i></a>
         </div>
         <div class="clearfix mb30"></div>
       </div>
-      <div class="col-sm-3">
-        <h3>What I need to learn...</h3>
-        <hr>
-        <div class="well text-center">
-          <div class="learning-backlog-text">
-            <h3 class="mt80 pl10 pr10">Mark whether or not you know a Card</h3>
-            <i class="fa fa-hand-o-left fa-3x"></i>
-          </div>
-        </div>
+      <div class="col-sm-12">
+        <ol class="breadcrumb row mt0 mb0">
+          <li><a href="select-career.html">Select Career</a></li>
+          <li><a href="select-role.html">Select Role</a></li>
+          <li class="active">Sort Skills</li>
+        </ol>
       </div>
 
     </div> <!-- /container -->

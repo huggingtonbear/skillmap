@@ -20,6 +20,11 @@ h1, .h1 {
   text-transform: uppercase;
   font-size: 56px;
 }
+.jumbotron.heading {
+  background-color: #3E3E3E;
+  color: white;
+  padding-bottom: 0;
+}
 /* Learning Points on Cards */
 .learning-points {
    padding-left: 2em;
@@ -62,11 +67,24 @@ a>.panel.panel-default:hover {
 .panel:hover {
   text-decoration: none;
 }
-.breadcrumb {
-  background: none;
+.well-title {
+    background: rgba(0,0,0,0.2);
+    color: white;
+    margin-top: -20px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.card-count {
+  color: grey;
 }
 .well {
   min-height: 550px;
+  border-radius: 0px;
 }
 .card-icon {
   vertical-align: middle;
@@ -76,7 +94,7 @@ a>.panel.panel-default:hover {
 }
 .learning-backlog-text, .learning-backlog-text h3 {
   color: rgba(0,0,0,0.4);
-  font-weight: 700;
+  font-size: 22px;
 }
 /* Stacked Panels */
 .faux-panel {
