@@ -1,0 +1,119 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Fixed Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Packt</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt50">
+      
+      <h1> Skill Sort</h1>
+      <p>Quickly <b>Sort</b> through the Skill Cards to create a bespoke learning plan to help you Skill Up</p> 
+      <hr class="mt0 mb5">
+      <ol class="breadcrumb row mt0 mb0">
+        <li><a href="select-career.html">Select Career</a></li>
+        <li><a href="select-role.html">Select Role</a></li>
+        <li class="active">Sort Skills</li>
+      </ol>
+      <div class="col-sm-3">
+        <h3>Skill Proficiency</h3>
+        <hr>
+        <div class="well text-center">
+          <img src="img/chris.jpg" alt="Chris" style="max-height:150px;" class="img-circle img-avatar img-responsive mt10">
+          <h4 class="mt20">Chris Murray</h4>
+          <h3>Python Developer</h3>
+          <small>Estimated Income: $110K</small>
+          <div class="progress mt20">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="thumbnail pt20">
+              <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>0/5</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h3 class="text-center mb40"><i class="fa fa-file-text"></i> 1/5</h3>
+        <div class="faux-panel faux-2nd">
+        </div>
+        <div class="faux-panel faux-1st">
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Python Fundamentals</h3>
+            <!-- <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
+            <br/> -->
+            <!-- <h4>Are you able to...</h4> -->
+            <hr>
+            <ul class="learning-points">
+            <li>Install and set up Python on Mac, Windows or Linux</li>
+            <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+            <li>Use Git to manage your Python code</li>
+            <li>Write Python scripts to automate daily tasks, and other software</li>
+            <li>Use unit tests to write better code, faster</li>
+            <ul>
+          </div>
+        </div>
+        <div class="">
+          <a href="index-cardselect.html" class="btn btn-success pull-left">I know this<i class="glyphicon glyphicon-ok ml10"></i></a>
+          <a href="index-cardselect.html" class="btn btn-danger pull-right">I don't know this<i class="glyphicon glyphicon-remove ml10"></i></a>
+        </div>
+        <div class="clearfix mb30"></div>
+      </div>
+      <div class="col-sm-3">
+        <h3>What I need to learn...</h3>
+        <hr>
+        <div class="well text-center">
+          <div class="learning-backlog-text">
+            <h3 class="mt80 pl10 pr10">Mark whether or not you know a Card</h3>
+            <i class="fa fa-hand-o-left fa-3x"></i>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

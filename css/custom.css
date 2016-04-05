@@ -45,6 +45,14 @@ a>.panel {
 .panel-default.active {
     border: 1px outset #76B8F1;
 }
+.panel-complete {
+    background-color: rgb(51, 122, 183);
+    color: white;
+    text-align: center;
+    min-height: 290px;
+    vertical-align: middle;
+    padding-top: 60px;
+}
 a:hover {
   text-decoration: none;
 }
