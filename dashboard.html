@@ -12,7 +12,7 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,91 +37,113 @@
         </div>
       </div>
     </nav>
-
-    <div class="container mt60">
-      <a href="select-career.html" class="btn btn-default btn-lg pull-right"><i class="fa fa-cog fa-lg"></i></a>
-      <h1>Dashboard</h1>
-      <hr class="mt0 mb5">
-      <div class="col-sm-3">
-        <h3>My Learning Plan</h3>
-        <hr>
-        <div class="well text-center">
-          <a href="#">
-            <div class="panel panel-default active">
-              <div class="panel-body">
-                <h5>Python Fundamentals</h5>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <h5>High Performance Python</h5>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <h5>Production Ready Django</h5>
-              </div>
-            </div>
-          </a>
-        </div>
+    <div class="jumbotron heading">
+      <div class="container">
+        <h1>Dashboard</h1>
+        <ol class="breadcrumb row mt0">
+            <li class="active mt5">My Goals</li>
+        </ol>
       </div>
-      
-      <div class="col-sm-6">
-        <h3>In Progress</h3>
-        <hr>
-        <div class="panel panel-default">
+    </div>
+
+    <div class="container">
+      <div class="col-sm-9">
+        <div class="panel panel-default mt20">
           <div class="panel-body">
-            <h3>Python Fundamentals</h3>
+            <h1 class="mt0"><i class="devicon-python-plain mr15"></i> Python Fundamentals</h1>
             <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-            <!-- <h4>Are you able to...</h4> -->
             <hr>
-            <ul class="learning-points">
-            <li>Install and set up Python on Mac, Windows or Linux</li>
-            <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-            <li>Use Git to manage your Python code</li>
-            <li>Write Python scripts to automate daily tasks, and other software</li>
-            <li>Use unit tests to write better code, faster</li>
-            </ul>
-            <hr>
-            <h4 class="mb15">Recommended Learning</h4>
             <ul class="list-group">
               <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
-                <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Python Essentials</strong>
-                <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
-                </span><br>
-                <small class="pull-left ng-binding">By Steven Lott</small>
+                <div class="col-sm-6">
+                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Python Essentials</strong>
+                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
+                  </span><br>
+                  <small class="pull-left ng-binding">By Steven Lott</small><br>
+                  <p><strong>Continue:</strong> Chapter 4: Mastering Python Essentials</p>
+                </div>
+                <div class="col-sm-12">
+                  <div class="progress mb10">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                      <span class="sr-only"></span>
+                    </div>
+                  </div>
+                </div>
                 <br>
-                <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>8 hours 56 minutes</small>
-                <small class="pull-right mr10 ng-binding" ng-show="item.ss_cck_field_date_of_publication">Jun 2015</small>
                 <div class="clearfix"></div>
                </a>
-              <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/video/Big-Data-and-Business-Intelligence/9781783988969" class="list-group-item list-name ng-scope">
-                <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Mastering Python [Video]</strong>
-                <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
-                </span><br>
-                <small class="pull-left ng-binding">By Daniel Arbuckle</small>
-                <br>
-                <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>2 Hours 35 minutes</small>
-                <small class="pull-right mr10 ng-binding" ng-show="item.ss_cck_field_date_of_publication">Apr 2015</small>
-                <div class="clearfix">
+               <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
+                <div class="col-sm-6">
+                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Mastering Python [Video]</strong>
+                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
+                  </span><br>
+                  <small class="pull-left ng-binding">By Daniel Arbuckle</small><br>
+                  <p><strong>Continue:</strong> Chapter 1: Getting to Grips with Python</p>
                 </div>
-              </a>
+                <div class="col-sm-12">
+                  <div class="progress mb10">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                      <span class="sr-only"></span>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="clearfix"></div>
+               </a>
+             </ul>
+             <a href="dashboard2.html" class="btn btn-success btn-block">Complete Card</a>
+          </div>
+        </div>
+        <div class="panel panel-default mt20">
+          <div class="panel-body">
+            <h1 class="mt0"><i class="devicon-python-plain mr15"></i> High Performance Python</h1>
+            <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
+            <hr>
+            <ul class="list-group">
+              <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
+                <div class="col-sm-6">
+                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Mastering Python High Performance</strong>
+                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
+                  </span><br>
+                  <small class="pull-left ng-binding">By Monk Abbot</small><br>
+                  <p><strong>Start:</strong> Preface</p>
+                </div>
+                <div class="col-sm-12">
+                  <div class="progress mb10">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                      <span class="sr-only"></span>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="clearfix"></div>
+               </a>
+               <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
+                <div class="col-sm-6">
+                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Mastering Python [Video]</strong>
+                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
+                  </span><br>
+                  <small class="pull-left ng-binding">By Daniel Arbuckle</small><br>
+                  <p><strong>Continue:</strong> Chapter 1: Getting to Grips with Python</p>
+                </div>
+                <div class="col-sm-12">
+                  <div class="progress mb10">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                      <span class="sr-only"></span>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="clearfix"></div>
+               </a>
              </ul>
              <a href="dashboard2.html" class="btn btn-success btn-block">Complete Card</a>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
-        <h3>Job Proficiency</h3>
-        <hr>
         <div class="well text-center">
-          <img src="img/chris.jpg" alt="Chris" style="width:150px;" class="img-circle img-responsive img-avatar mt10">
-          <h4 class="mt20">Chris Murray</h4>
-          <h3>Python Developer</h3>
+          <h3 class="well-title">Role Progress</h3>
           <small>Estimated Income: $110K</small>
           <div class="progress mt20">
             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
