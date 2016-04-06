@@ -19,6 +19,7 @@ h1, .h1 {
   font-family: Knockout, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 56px;
+  vertical-align: middle;
 }
 .jumbotron.heading {
   background-color: #3E3E3E;
@@ -65,8 +66,14 @@ a>.panel {
   text-decoration:none;
   color: #333;
 }
+.panel h1 {
+  font-size: 45px;
+}
 .panel-default.active {
     border: 1px outset #76B8F1;
+}
+.sm-card-icon {
+  font-size: 56px;
 }
 .panel-complete {
     background-color: rgb(51, 122, 183);
@@ -76,11 +83,23 @@ a>.panel {
     vertical-align: middle;
     padding-top: 60px;
 }
+.well .panel h1 {
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
 a:hover {
   text-decoration: none;
 }
 a>.panel.panel-default:hover {
   border: 1px solid #9CCAF1;
+  margin-top: -5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  background: rgba(200, 200, 200, 0.1);
+  transition: 0.4s;
+}
+a>.panel.panel-default {
+  transition: 0.2s;
 }
 .panel:hover {
   text-decoration: none;
