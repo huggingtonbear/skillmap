@@ -33,129 +33,297 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Packt</a>
+          
         </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a class="navbar-brand" href="#">Mapt</a></li>
+            <li><a href="select-goal.html">Skill Up</a></li>
+            <li><a href="#about">Collection</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">You are signed in as Oli Huggins</li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Manage Subscription</a></li>
+                <li><a href="#">Manage Account</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
     <div class="jumbotron heading">
       <div class="container">
-        <h1>Dashboard</h1>
-        <ol class="breadcrumb row mt0">
-            <li class="active mt5">My Goals</li>
-        </ol>
+        <div class="row">
+          <ul class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-briefcase fa-3x mt15"></i></p>My Work</a></li>
+            <li role="presentation"><a href="#stats" aria-controls="stats" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-line-chart fa-3x mt15"></i></p>Learning Stats</a></li>
+            <li role="presentation"><a href="#bookmarks" aria-controls="bookmarks" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-bookmark fa-3x mt15"></i></p>Bookmarks</a></li>
+            <li role="presentation"><a href="#readinglist" aria-controls="readinglist" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-book fa-3x mt15"></i></p>Reading List</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="col-sm-9">
-        <div class="panel panel-default mt20">
-          <div class="panel-body">
-            <h1 class="mt0"><i class="devicon-python-plain mr15"></i> Python Fundamentals</h1>
-            <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-            <hr>
-            <ul class="list-group">
-              <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
-                <div class="col-sm-6">
-                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Python Essentials</strong>
-                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
-                  </span><br>
-                  <small class="pull-left ng-binding">By Steven Lott</small><br>
-                  <p><strong>Continue:</strong> Chapter 4: Mastering Python Essentials</p>
+    <div class="container tab-content">
+      <!-- Home Tab -->
+      <div role="tabpanel" class="tab-pane fade in active" id="home">
+        <div class="col-sm-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Last viewed:</h3>
+            </div>
+            <div class="panel-body">
+              <strong>Mastering MEAN Web Development [Video]</strong>
+              <p><small>Everything you need to know to build flawless and robust websites with the MEAN stack</small></p>
+              <p><strong>Last section:</strong> Under the Hood of the ng-route Generator</p>
+            </div>
+            <div class="panel-footer text-right">
+                  <a href="index-video.html" class="btn btn-primary">Continue</a>
+            </div>
+          </div>
+          <!-- Skill Card Start -->
+          <div class="panel panel-default mt20">
+            <div class="panel-body">
+              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+              <h1 class="mt0"><i class="devicon-python-plain mr15"></i> Python Fundamentals</h1>
+              <div class="progress mb10">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                        <span class="sr-only"></span>
+                      </div>
                 </div>
-                <div class="col-sm-12">
-                  <div class="progress mb10">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                      <span class="sr-only"></span>
+              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
+              <button class="btn btn-default col-sm-offset-4 col-sm-4" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa fa-info-circle mr10"></i>More Info
+              </button>
+              <div class="clearfix"></div>
+              <div class="collapse" id="collapseExample">
+                <hr>
+                <div class="ml25">
+                  <ul class="learning-points">
+                    <li>Install and set up Python on Mac, Windows or Linux</li>
+                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                    <li>Use Git to manage your Python code</li>
+                    <li>Write Python scripts to automate daily tasks, and other software</li>
+                    <li>Use unit tests to write better code, faster</li>
+                  <ul>
+                </div>
+              </div>
+              <hr>
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h5 class="concat"><b>Python Essentials</b></h5>
+                    <small class="mt0 mb0 concat">By Steven Lott</small>
+                    <div class="progress title-progress mb10 mt10">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                            <span class="sr-only"></span>
+                          </div>
                     </div>
+                    <strong>Last Viewed:</strong> 
+                    <p class="concat">Chapter 9: Advancing Python</p>
+                    <a href="#" class="btn btn-primary btn-block">Continue</a>
                   </div>
                 </div>
-                <br>
-                <div class="clearfix"></div>
-               </a>
-               <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
-                <div class="col-sm-6">
-                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Mastering Python [Video]</strong>
-                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
-                  </span><br>
-                  <small class="pull-left ng-binding">By Daniel Arbuckle</small><br>
-                  <p><strong>Continue:</strong> Chapter 1: Getting to Grips with Python</p>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress mb10">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-                      <span class="sr-only"></span>
+              </div>
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h5 class="concat"><b>Mastering Python [Video]</b></h5>
+                    <small class="mt0 mb0 concat">By Daniel Arbuckle</small>
+                    <div class="progress title-progress mb10 mt10">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                            <span class="sr-only"></span>
+                          </div>
                     </div>
+                    <strong>Last Viewed:</strong> 
+                    <p class="concat">Chapter 4: Mastering Python Essentials</p>
+                    <a href="#" class="btn btn-primary btn-block">Continue</a>
                   </div>
                 </div>
-                <br>
-                <div class="clearfix"></div>
-               </a>
-             </ul>
-             <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+              </div>
+              <div class="clearfix"></div>
+               <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+            </div>
+          </div>
+          <!-- Skill Card End -->
+          <!-- Skill Card Start -->
+          <div class="panel panel-default mt20">
+            <div class="panel-body">
+              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+              <h1 class="mt0"><i class="devicon-python-plain mr15"></i> High Performance Python</h1>
+              <div class="progress mb10">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 12%;">
+                        <span class="sr-only"></span>
+                      </div>
+                </div>
+              <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
+              <button class="btn btn-default col-sm-offset-4 col-sm-4" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                <i class="fa fa-info-circle mr10"></i>More Info
+              </button>
+              <div class="clearfix"></div>
+              <div class="collapse" id="collapseExample2">
+                <hr>
+                <div class="ml25">
+                  <ul class="learning-points">
+                    <li>Use Cython to create blazing fast applications using Python and C</li>
+                    <li>Master code optimization techniques, and learn about all 16 classic design patterns to help super-charge your applications</li>
+                    <li>Deploy decorators, design patters, and various optimization techniques to use Python 3.5 effectively</li>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h5 class="concat"><b>Mastering Python High Performance</b></h5>
+                    <small class="mt0 mb0 concat">By Luke Skywalker</small>
+                    <div class="progress title-progress mb10 mt10">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:33%;">
+                            <span class="sr-only"></span>
+                          </div>
+                    </div>
+                    <strong>Last Viewed:</strong> 
+                    <p class="concat">Chapter 3: Mastering the High Performance</p>
+                    <a href="#" class="btn btn-primary btn-block">Continue</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h5 class="concat"><b>Mastering Python Design Patterns</b></h5>
+                    <small class="mt0 mb0 concat">By Jabba the Hutt</small>
+                    <div class="progress title-progress mb10 mt10">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only"></span>
+                          </div>
+                    </div>
+                    <strong>Start:</strong> 
+                    <p class="concat">Preface</p>
+                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h5 class="concat"><b>Python Unlocked</b></h5>
+                    <small class="mt0 mb0 concat">By Supreme Leader Snoke</small>
+                    <div class="progress title-progress mb10 mt10">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only"></span>
+                          </div>
+                    </div>
+                    <strong>Start:</strong> 
+                    <p class="concat">Preface</p>
+                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+               <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+            </div>
+          </div>
+          <!-- Skill Card End -->
+          <!-- Skill Card Start -->
+          <div class="panel panel-default mt20">
+            <div class="panel-body">
+              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+              <h1 class="mt0"><i class="devicon-django-plain mr15"></i> Production Ready Django</h1>
+              <div class="progress mb10">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        <span class="sr-only"></span>
+                      </div>
+                </div>
+              <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
+              <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
+              <button class="btn btn-default col-sm-offset-4 col-sm-4" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                <i class="fa fa-info-circle mr10"></i>More Info
+              </button>
+              <div class="clearfix"></div>
+              <div class="collapse" id="collapseExample3">
+                <hr>
+                <div class="ml25">
+                  <ul class="learning-points">
+                    <li>Use common design patterns that can help you write better, more efficient, Django code</li>
+                    <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
+                    <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
+                  <ul>
+                </div>
+              </div>
+              <hr>
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h5 class="concat"><b>Django Design Patterns and Best Practices</b></h5>
+                    <small class="mt0 mb0 concat">By Han Solo and Greedo</small>
+                    <div class="progress title-progress mb10 mt10">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                            <span class="sr-only"></span>
+                          </div>
+                    </div>
+                    <strong>Start:</strong> 
+                    <p class="concat">Preface</p>
+                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h5 class="concat"><b>Web Development with Django Cookbook</b></h5>
+                    <small class="mt0 mb0 concat">By Lando Calrissian</small>
+                    <div class="progress title-progress mb10 mt10">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only"></span>
+                          </div>
+                    </div>
+                    <strong>Start:</strong> 
+                    <p class="concat">Preface</p>
+                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+               <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+            </div>
+          </div>
+          <!-- Skill Card End -->
+        </div>
+        <div class="col-sm-3">
+          <div class="well text-center">
+            <h3 class="well-title">Role Progress</h3>
+            <small>Estimated Income: $110K</small>
+            <div class="progress mt20">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                <span class="sr-only"></span>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="thumbnail pt20">
+                <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>2/5</b></p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="panel panel-default mt20">
-          <div class="panel-body">
-            <h1 class="mt0"><i class="devicon-python-plain mr15"></i> High Performance Python</h1>
-            <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-            <hr>
-            <ul class="list-group">
-              <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
-                <div class="col-sm-6">
-                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Mastering Python High Performance</strong>
-                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
-                  </span><br>
-                  <small class="pull-left ng-binding">By Monk Abbot</small><br>
-                  <p><strong>Start:</strong> Preface</p>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress mb10">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <div class="clearfix"></div>
-               </a>
-               <a ng-if="item.ss_cck_field_available !== 'Forthcoming'" href="https://www.packtpub.com/packtlib/book/Application-Development/9781784390341" class="list-group-item list-name ng-scope">
-                <div class="col-sm-6">
-                  <strong ng-bind-html="item.title | to_trusted" class="ng-binding">Mastering Python Design Patterns</strong>
-                  <span class="animate-switch-container hidden-xs" ng-switch="" on="item.ss_cck_field_book_series">
-                  </span><br>
-                  <small class="pull-left ng-binding">By Michael Platt</small><br>
-                  <p><strong>Start:</strong> Preface</p>
-                </div>
-                <div class="col-sm-12">
-                  <div class="progress mb10">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <div class="clearfix"></div>
-               </a>
-             </ul>
-             <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-          </div>
-        </div>
+      </div><!-- /Home Tab -->
+      <div role="tabpanel" class="tab-pane fade" id="stats">
+        Stats go here
       </div>
-      <div class="col-sm-3">
-        <div class="well text-center">
-          <h3 class="well-title">Role Progress</h3>
-          <small>Estimated Income: $110K</small>
-          <div class="progress mt20">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-              <span class="sr-only"></span>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <div class="thumbnail pt20">
-              <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>2/5</b></p>
-            </div>
-          </div>
-        </div>
+      <div role="tabpanel" class="tab-pane fade" id="bookmarks">
+        Bookmarks go here
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="readinglist">
+        Reading list goes here
       </div>
 
     </div> <!-- /container -->
