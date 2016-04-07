@@ -40,9 +40,18 @@
           <ul class="nav navbar-nav">
             <li class="active"><a class="navbar-brand" href="#">Mapt</a></li>
             <li><a href="select-goal.html">Skill Up</a></li>
-            <li><a href="#about">Collection</a></li>
+            <li><a href="#about">Library</a></li>
+            
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <form class="search navbar-form navbar-left search-nav-collapse">
+                <div class="form-group pull-right form-group-inline">
+                    <div class="input-group">
+                        <input class="form-control" name="query" value="" type="text" placeholder="Search for Courses...">
+                        <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
+                    </div>
+                </div>
+            </form>
             <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -66,9 +75,9 @@
         <div class="row">
           <ul class="nav nav-pills nav-justified" role="tablist">
             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-briefcase fa-3x mt15"></i></p>My Work</a></li>
-            <li role="presentation"><a href="#stats" aria-controls="stats" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-line-chart fa-3x mt15"></i></p>Learning Stats</a></li>
-            <li role="presentation"><a href="#bookmarks" aria-controls="bookmarks" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-bookmark fa-3x mt15"></i></p>Bookmarks</a></li>
-            <li role="presentation"><a href="#readinglist" aria-controls="readinglist" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-book fa-3x mt15"></i></p>Reading List</a></li>
+            <li role="presentation"><a href="#stats" aria-controls="stats" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-line-chart fa-3x mt15"></i></p>Mapt Stats</a></li>
+            <li role="presentation"><a href="#bookmarks" aria-controls="bookmarks" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-bookmark fa-3x mt15"></i></p>My Bookmarks</a></li>
+            <li role="presentation"><a href="#readinglist" aria-controls="readinglist" role="tab" data-toggle="tab"><p class="mb5"><i class="fa fa-book fa-3x mt15"></i></p>My Collection</a></li>
           </ul>
         </div>
       </div>
@@ -78,7 +87,8 @@
       <!-- Home Tab -->
       <div role="tabpanel" class="tab-pane fade in active" id="home">
         <div class="col-sm-9">
-          <div class="panel panel-default">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <!-- <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Last viewed:</h3>
             </div>
@@ -90,13 +100,18 @@
             <div class="panel-footer text-right">
                   <a href="index-video.html" class="btn btn-primary">Continue</a>
             </div>
-          </div>
+          </div> -->
           <!-- Skill Card Start -->
-          <div class="panel panel-default mt20">
-            <div class="panel-body">
-              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+          <div class="panel panel-default">
+            <a data-toggle="collapse" href="#showCard" data-parent="#accordion" aria-expanded="false" aria-controls="showCard">
+              <div class="panel-heading">
+                <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
               <h1 class="mt0"><i class="devicon-python-plain mr15"></i> Python Fundamentals</h1>
-              <div class="progress mb10">
+              </div>
+            </a>
+            <div class="collapse in" id="showCard">
+              <div class="panel-body">
+                <div class="progress mb10">
                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
                         <span class="sr-only"></span>
                       </div>
@@ -153,152 +168,166 @@
               </div>
               <div class="clearfix"></div>
                <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+              
+              </div>
             </div>
           </div>
-          <!-- Skill Card End -->
           <!-- Skill Card Start -->
-          <div class="panel panel-default mt20">
-            <div class="panel-body">
-              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+          <div class="panel panel-default">
+            <a data-toggle="collapse" href="#showCard1" data-parent="#accordion" aria-expanded="false" aria-controls="showCard1">
+              <div class="panel-heading">
+                <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
               <h1 class="mt0"><i class="devicon-python-plain mr15"></i> High Performance Python</h1>
-              <div class="progress mb10">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 12%;">
-                        <span class="sr-only"></span>
-                      </div>
+              </div>
+            </a>
+            <div class="collapse" id="showCard1">
+              <div class="panel-body">
+                <div class="progress mb10 mt15">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 12%;">
+                          <span class="sr-only"></span>
+                        </div>
                 </div>
-              <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
-              <button class="btn btn-default col-sm-offset-4 col-sm-4" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                <i class="fa fa-info-circle mr10"></i>More Info
-              </button>
-              <div class="clearfix"></div>
-              <div class="collapse" id="collapseExample2">
+                <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
+                <button class="btn btn-default col-sm-offset-4 col-sm-4" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                  <i class="fa fa-info-circle mr10"></i>More Info
+                </button>
+                <div class="clearfix"></div>
+                <div class="collapse" id="collapseExample2">
+                  <hr>
+                  <div class="ml25">
+                    <ul class="learning-points">
+                      <li>Use Cython to create blazing fast applications using Python and C</li>
+                      <li>Master code optimization techniques, and learn about all 16 classic design patterns to help super-charge your applications</li>
+                      <li>Deploy decorators, design patters, and various optimization techniques to use Python 3.5 effectively</li>
+                    </ul>
+                  </div>
+                </div>
                 <hr>
-                <div class="ml25">
-                  <ul class="learning-points">
-                    <li>Use Cython to create blazing fast applications using Python and C</li>
-                    <li>Master code optimization techniques, and learn about all 16 classic design patterns to help super-charge your applications</li>
-                    <li>Deploy decorators, design patters, and various optimization techniques to use Python 3.5 effectively</li>
-                  </ul>
-                </div>
-              </div>
-              <hr>
-              <div class="col-sm-4">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <h5 class="concat"><b>Mastering Python High Performance</b></h5>
-                    <small class="mt0 mb0 concat">By Luke Skywalker</small>
-                    <div class="progress title-progress mb10 mt10">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:33%;">
-                            <span class="sr-only"></span>
-                          </div>
+                <div class="col-sm-4">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <h5 class="concat"><b>Mastering Python High Performance</b></h5>
+                      <small class="mt0 mb0 concat">By Luke Skywalker</small>
+                      <div class="progress title-progress mb10 mt10">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:33%;">
+                              <span class="sr-only"></span>
+                            </div>
+                      </div>
+                      <strong>Last Viewed:</strong> 
+                      <p class="concat">Chapter 3: Mastering the High Performance</p>
+                      <a href="#" class="btn btn-primary btn-block">Continue</a>
                     </div>
-                    <strong>Last Viewed:</strong> 
-                    <p class="concat">Chapter 3: Mastering the High Performance</p>
-                    <a href="#" class="btn btn-primary btn-block">Continue</a>
                   </div>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <h5 class="concat"><b>Mastering Python Design Patterns</b></h5>
-                    <small class="mt0 mb0 concat">By Jabba the Hutt</small>
-                    <div class="progress title-progress mb10 mt10">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                            <span class="sr-only"></span>
-                          </div>
+                <div class="col-sm-4">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <h5 class="concat"><b>Mastering Python Design Patterns</b></h5>
+                      <small class="mt0 mb0 concat">By Jabba the Hutt</small>
+                      <div class="progress title-progress mb10 mt10">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                              <span class="sr-only"></span>
+                            </div>
+                      </div>
+                      <strong>Start:</strong> 
+                      <p class="concat">Preface</p>
+                      <a href="#" class="btn btn-primary btn-block">Start Learning</a>
                     </div>
-                    <strong>Start:</strong> 
-                    <p class="concat">Preface</p>
-                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
                   </div>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <h5 class="concat"><b>Python Unlocked</b></h5>
-                    <small class="mt0 mb0 concat">By Supreme Leader Snoke</small>
-                    <div class="progress title-progress mb10 mt10">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                            <span class="sr-only"></span>
-                          </div>
+                <div class="col-sm-4">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <h5 class="concat"><b>Python Unlocked</b></h5>
+                      <small class="mt0 mb0 concat">By Supreme Leader Snoke</small>
+                      <div class="progress title-progress mb10 mt10">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                              <span class="sr-only"></span>
+                            </div>
+                      </div>
+                      <strong>Start:</strong> 
+                      <p class="concat">Preface</p>
+                      <a href="#" class="btn btn-primary btn-block">Start Learning</a>
                     </div>
-                    <strong>Start:</strong> 
-                    <p class="concat">Preface</p>
-                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
                   </div>
                 </div>
+                <div class="clearfix"></div>
+                 <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+              
               </div>
-              <div class="clearfix"></div>
-               <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+            </div>
+          </div>
+          <!-- Skill Card Start/End -->
+          <div class="panel panel-default">
+            <a data-toggle="collapse" href="#showCard2" data-parent="#accordion" aria-expanded="false" aria-controls="showCard2">
+              <div class="panel-heading">
+                <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="mt0"><i class="devicon-django-plain mr15"></i> Production Ready Django</h1>
+              </div>
+            </a>
+            <div class="collapse" id="showCard2">
+              <div class="panel-body">
+                <div class="progress mb10">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                          <span class="sr-only"></span>
+                        </div>
+                  </div>
+                <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
+                <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
+                <button class="btn btn-default col-sm-offset-4 col-sm-4" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                  <i class="fa fa-info-circle mr10"></i>More Info
+                </button>
+                <div class="clearfix"></div>
+                <div class="collapse" id="collapseExample3">
+                  <hr>
+                  <div class="ml25">
+                    <ul class="learning-points">
+                      <li>Use common design patterns that can help you write better, more efficient, Django code</li>
+                      <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
+                      <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
+                    <ul>
+                  </div>
+                </div>
+                <hr>
+                <div class="col-sm-4">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <h5 class="concat"><b>Django Design Patterns and Best Practices</b></h5>
+                      <small class="mt0 mb0 concat">By Han Solo and Greedo</small>
+                      <div class="progress title-progress mb10 mt10">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                              <span class="sr-only"></span>
+                            </div>
+                      </div>
+                      <strong>Start:</strong> 
+                      <p class="concat">Preface</p>
+                      <a href="#" class="btn btn-primary btn-block">Start Learning</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <h5 class="concat"><b>Web Development with Django Cookbook</b></h5>
+                      <small class="mt0 mb0 concat">By Lando Calrissian</small>
+                      <div class="progress title-progress mb10 mt10">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                              <span class="sr-only"></span>
+                            </div>
+                      </div>
+                      <strong>Start:</strong> 
+                      <p class="concat">Preface</p>
+                      <a href="#" class="btn btn-primary btn-block">Start Learning</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                 <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+              </div>
             </div>
           </div>
           <!-- Skill Card End -->
-          <!-- Skill Card Start -->
-          <div class="panel panel-default mt20">
-            <div class="panel-body">
-              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
-              <h1 class="mt0"><i class="devicon-django-plain mr15"></i> Production Ready Django</h1>
-              <div class="progress mb10">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                        <span class="sr-only"></span>
-                      </div>
-                </div>
-              <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
-              <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
-              <button class="btn btn-default col-sm-offset-4 col-sm-4" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-                <i class="fa fa-info-circle mr10"></i>More Info
-              </button>
-              <div class="clearfix"></div>
-              <div class="collapse" id="collapseExample3">
-                <hr>
-                <div class="ml25">
-                  <ul class="learning-points">
-                    <li>Use common design patterns that can help you write better, more efficient, Django code</li>
-                    <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
-                    <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
-                  <ul>
-                </div>
-              </div>
-              <hr>
-              <div class="col-sm-4">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <h5 class="concat"><b>Django Design Patterns and Best Practices</b></h5>
-                    <small class="mt0 mb0 concat">By Han Solo and Greedo</small>
-                    <div class="progress title-progress mb10 mt10">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
-                            <span class="sr-only"></span>
-                          </div>
-                    </div>
-                    <strong>Start:</strong> 
-                    <p class="concat">Preface</p>
-                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <h5 class="concat"><b>Web Development with Django Cookbook</b></h5>
-                    <small class="mt0 mb0 concat">By Lando Calrissian</small>
-                    <div class="progress title-progress mb10 mt10">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                            <span class="sr-only"></span>
-                          </div>
-                    </div>
-                    <strong>Start:</strong> 
-                    <p class="concat">Preface</p>
-                    <a href="#" class="btn btn-primary btn-block">Start Learning</a>
-                  </div>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-               <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-            </div>
           </div>
-          <!-- Skill Card End -->
         </div>
         <div class="col-sm-3">
           <div class="well text-center">

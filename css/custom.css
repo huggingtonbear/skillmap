@@ -48,6 +48,10 @@ h1, .h1 {
   padding-top: 0px;
   margin-bottom: 5px;
 }
+span.input-group-btn button.btn {
+    height: 34px;
+    padding-top: 8px;
+}
 .jumbotron ol li a {
   color: #D9EDF7;
   text-transform: uppercase;
@@ -79,6 +83,14 @@ h1, .h1 {
 a>.panel {
   text-decoration:none;
   color: #333;
+}
+a>.panel-heading, a>.panel-heading:hover, a>.panel-heading:focus{
+  text-decoration:none;
+  color: #333;
+}
+a:focus, a:hover {
+     color: none; 
+     text-decoration: none; 
 }
 .panel h1 {
   font-size: 45px;
