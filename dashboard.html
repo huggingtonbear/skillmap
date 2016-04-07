@@ -154,7 +154,7 @@
                 </div>
               </div>
               <div class="clearfix"></div>
-               <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+               <a href="dashboard2.html" class="btn btn-success pull-right mt20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
               
               </div>
             </div>
@@ -239,7 +239,7 @@
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                 <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                 <a href="dashboard2.html" class="btn btn-success pull-right mt20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
               
               </div>
             </div>
@@ -309,7 +309,7 @@
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                 <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                 <a href="dashboard2.html" class="btn btn-success pull-right mt20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
               </div>
             </div>
           </div>
@@ -318,17 +318,20 @@
         </div>
         <div class="col-sm-3">
           <div class="well text-center">
-            <h3 class="well-title">Python Developer<a href="#"><i class="fa fa-info-circle fa-lg pull-right" style="color:white;"></i></a></h3>
-            <p>Est. Income: $110K</p>
+            <h3 class="well-title">Python Developer<a href="#"><i class="fa fa-info-circle fa-lg pull-right" style="color:white;"></i></a><p class="mt5"><small>Est. Income: $110K</small></p></h3>
+            
             <div class="progress mt20">
               <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
                 <span class="sr-only"></span>
               </div>
             </div>
             <div class="col-xs-12">
-              <div class="thumbnail pt20">
-                <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>2/5</b></p>
-              </div>
+              <a href="all-cards.html">
+                <div class="panel pt20">
+                  <i class="fa fa-file-text fa-2x pb20 mr10"></i><span class="skill-counter"><b>8</b></span>
+                  <p><b>View All</b></p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -400,7 +403,126 @@
       </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="readinglist">
-        Reading list goes here
+        <div ng-show="myList[0]" class="col-sm-offset-6 col-md-offset-8 col-lg-offset-9 col-sm-6 col-md-4 col-lg-3 mb20">
+            <select ng-change="sort_myList($event)" class="form-control ng-pristine ng-valid ng-touched" name="sorted_myList" data-ng-options="o.name for o in dropdown_options_sort track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="mostPopular" label="Sort by Most Popular">Sort by Most Popular</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
+        </div>
+        <div class="col-sm-12">
+            <div ng-show="myList[0]" class="panel panel-default">
+                <ul class="list-group">
+                    <!-- ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781784393649" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Learning Web Component Development</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+
+                        </span><br>
+                        <small class="pull-left ng-binding">By Sandeep Kumar Patel</small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>7 hours 40 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Web-Development/9781784391874" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Mastering CSS [Video]</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+
+                        </span><br>
+                        <small class="pull-left ng-binding">By Rich Finelli </small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>4 hours and 44 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Big-Data-and-Business-Intelligence/9781783988969" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Mastering Python [Video]</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+
+                        </span><br>
+                        <small class="pull-left ng-binding">By Daniel Arbuckle</small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>2 Hours 35 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Web-Development/9781784395063" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Mastering MEAN Web Development [Video]</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+
+                        </span><br>
+                        <small class="pull-left ng-binding">By Luke Madera</small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>3 Hours 36 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Web-Development/9781783554157" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Learning Django Web Development [Video]</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                        </span><br>
+                        <small class="pull-left ng-binding">By Matthew Nuzum</small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>1 hour 40 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781783984480" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Building Scalable Apps with Redis and Node.js</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+
+                        </span><br>
+                        <small class="pull-left ng-binding">By Joshua Johanan</small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>9 hours 28 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2014</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781783553334" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Learning Python Data Visualization</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                            <!-- ngSwitchWhen: beginners guide -->
+                            <!-- ngSwitchWhen: mastering -->
+                            <!-- ngSwitchWhen: essentials -->
+                            <!-- ngSwitchWhen: blueprints -->
+                            <!-- ngSwitchWhen: cookbook -->
+                            <!-- ngSwitchWhen: by example -->
+                            <!-- ngSwitchDefault:  -->
+                        </span><br>
+                        <small class="pull-left ng-binding">By Chad R. Adams</small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>6 hours 21 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2014</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781782166320" class="list-group-item list-name">
+                        <strong ng-bind-html="value.title" class="ng-binding">Mastering Node.js</strong>
+                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                            <!-- ngSwitchWhen: learning -->
+                            <!-- ngSwitchWhen: beginners guide -->
+                            <!-- ngSwitchWhen: essentials -->
+                            <!-- ngSwitchWhen: blueprints -->
+                            <!-- ngSwitchWhen: cookbook -->
+                            <!-- ngSwitchWhen: by example -->
+                            <!-- ngSwitchDefault:  -->
+                        </span><br>
+                        <small class="pull-left ng-binding">By Sandro Pasquali</small>
+                        <br>
+                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>10 hours 22 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2013</small><!-- end ngIf: value.publication_date -->
+                        <div class="clearfix">
+                        </div>
+                    </a><!-- end ngRepeat: (key, value) in myList -->
+                </ul>
+                <div class="panel-footer text-right ng-hide" ng-show="myList.pagination > 1">
+                    <nav>
+                        <ul class="pagination">
+                            <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+                            <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li ng-repeat="i in getNumber(myList.pagination) track by $index" id="paginationNumber" ng-class="{active: myList.offset == $index}" data-page="list" ng-click="$event.preventDefault();click_pagination($event, $index, 'list');" class="ng-scope active">
+                                    <a href="#" class="ng-binding">1</a>
+                            </li><!-- end ngRepeat: i in getNumber(myList.pagination) track by $index -->
+                            <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.next, 'list');" class="disabled"> 
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
       </div>
 
     </div> <!-- /container -->
