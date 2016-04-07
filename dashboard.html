@@ -318,10 +318,10 @@
         </div>
         <div class="col-sm-3">
           <div class="well text-center">
-            <h3 class="well-title">Role Progress</h3>
+            <h3 class="well-title">Python Developer<a href="#"><i class="fa fa-info-circle fa-lg pull-right" style="color:white;"></i></a></h3>
             <small>Estimated Income: $110K</small>
             <div class="progress mt20">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
                 <span class="sr-only"></span>
               </div>
             </div>
@@ -335,7 +335,6 @@
       </div><!-- /Home Tab -->
       <div role="tabpanel" class="tab-pane fade" id="stats">
         <div class="col-sm-12">
-          <div id="mygraph"></div>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="bookmarks">
@@ -353,76 +352,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/data.js"></script>
-    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-    <script type="text/javascript">
-      $(function () {
-        // Create the chart
-        $('#mygraph').highcharts({
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: ''
-            },
-            xAxis: {
-                type: 'category'
-            },
-            yAxis: {
-                title: {
-                    text: 'Sections Completed'
-                }
-
-            },
-            legend: {
-                enabled: false
-            },
-            plotOptions: {
-                series: {
-                    borderWidth: 0,
-                    dataLabels: {
-                        enabled: false,
-                        format: '{point.y:.1f}%'
-                    }
-                }
-            },
-
-            tooltip: {
-                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-            },
-
-            series: [{
-                name: 'Days of Week',
-                colorByPoint: false,
-                data: [{
-                    name: 'Sunday',
-                    y: 2,
-                }, {
-                    name: 'Monday',
-                    y: 7,
-                }, {
-                    name: 'Tuesday',
-                    y: 4,
-                }, {
-                    name: 'Wednesday',
-                    y: 2,
-                }, {
-                    name: 'Thursday',
-                    y: 12,
-                }, {
-                name: 'Friday',
-                y: 10,
-            },
-             {
-                name: 'Today',
-                y: 0,
-            }
-            ]
-        }],
-    });
-});
-    </script>
   </body>
 </html>
