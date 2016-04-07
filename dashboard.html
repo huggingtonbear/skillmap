@@ -13,6 +13,9 @@
     <link href="css/general.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -317,7 +320,9 @@
         </div>
       </div><!-- /Home Tab -->
       <div role="tabpanel" class="tab-pane fade" id="stats">
-        Stats go here
+        <div class="col-sm-6">
+          <div id="mygraph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="bookmarks">
         Bookmarks go here
@@ -334,5 +339,73 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        // Create the chart
+        $('#mygraph').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ''
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Sections Completed'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: false,
+                        format: '{point.y:.1f}%'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+            },
+
+            series: [{
+                name: 'Days of Week',
+                colorByPoint: false,
+                data: [{
+                    name: 'Sunday',
+                    y: 2,
+                }, {
+                    name: 'Monday',
+                    y: 7,
+                }, {
+                    name: 'Tuesday',
+                    y: 4,
+                }, {
+                    name: 'Wednesday',
+                    y: 2,
+                }, {
+                    name: 'Thursday',
+                    y: 12,
+                }, {
+                name: 'Friday',
+                y: 10,
+            },
+             {
+                name: 'Today',
+                y: 0,
+            }
+            ]
+        }],
+    });
+});
+    </script>
   </body>
 </html>
