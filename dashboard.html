@@ -93,7 +93,7 @@
             <a data-toggle="collapse" href="#showCard" data-parent="#accordion" aria-expanded="false" aria-controls="showCard">
               <div class="panel-heading">
                 <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
-              <h1 class="mt0"><i class="devicon-python-plain mr15"></i> Python Fundamentals</h1>
+              <h1 class="mt0"><i class="devicon-python-plain mr15"></i> Python Fundamentals <small class="ml10 title-duration"><i class="fa fa-clock-o mr5"></i>10 hours 20 minutes</small></h1>
                 <div class="progress title-progress mb10">
                         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
                           <span class="sr-only"></span>
@@ -164,7 +164,7 @@
             <a data-toggle="collapse" href="#showCard1" data-parent="#accordion" aria-expanded="false" aria-controls="showCard1">
               <div class="panel-heading">
                 <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
-                <h1 class="mt0"><i class="devicon-python-plain mr15"></i> High Performance Python</h1>
+                <h1 class="mt0"><i class="devicon-python-plain mr15"></i> High Performance Python <small class="ml10 title-duration"><i class="fa fa-clock-o mr5"></i>13 hours 45 minutes</small></h1>
                 <div class="progress title-progress mb10 mt15">
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 12%;">
                       <span class="sr-only"></span>
@@ -249,7 +249,7 @@
             <a data-toggle="collapse" href="#showCard2" data-parent="#accordion" aria-expanded="false" aria-controls="showCard2">
               <div class="panel-heading">
                 <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
-                <h1 class="mt0"><i class="devicon-django-plain mr15"></i> Production Ready Django</h1>
+                <h1 class="mt0"><i class="devicon-django-plain mr15"></i> Production Ready Django <small class="ml10 title-duration"><i class="fa fa-clock-o mr5"></i>20 hours 10 minutes</small></h1>
                 <div class="progress title-progress mb10">
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                     <span class="sr-only"></span>
@@ -319,7 +319,7 @@
         <div class="col-sm-3">
           <div class="well text-center">
             <h3 class="well-title">Python Developer<a href="#"><i class="fa fa-info-circle fa-lg pull-right" style="color:white;"></i></a></h3>
-            <small>Estimated Income: $110K</small>
+            <p>Est. Income: $110K</p>
             <div class="progress mt20">
               <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
                 <span class="sr-only"></span>
@@ -338,7 +338,66 @@
         </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="bookmarks">
-        Bookmarks go here
+        <div ng-show="dashboard_counts.bookmarks > 0" class="panel panel-default">
+          <ul class="list-group">
+              <span ng-repeat="(key, value) in myBookmarks" class="ng-scope">
+                  <a href="/packtlib" class="list-group-item list-name disabled">
+                      <strong ng-bind-html="value.book.title" class="ng-binding">Learning Django Web Development [Video]</strong>
+                      <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book.field_book_series">
+                      </span><br>
+                      <small class="pull-left ng-binding">By Matthew Nuzum</small>
+                      <br>
+                      <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>1 hour 40 minutes</small>
+                      <small ng-if="value.book.field_date_of_publication_value" class="pull-right mr10 ng-binding ng-scope">Jun 2015</small>
+                      <div class="clearfix">
+                      </div>
+                  </a>
+                  <a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/video/test/9781783554157/5690/5691/Enabling+the+Django+Debug+Toolbar" class="list-group-item list-name ng-scope">
+                      <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Enabling the Django Debug Toolbar</strong></span>
+                  </a>
+                  <a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/video/test/9781783554157/5685/5687/Changing+Our+Models" class="list-group-item list-name ng-scope">
+                      <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Changing Our Models</strong></span>
+                  </a>
+                  <a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/video/test/9781783554157/5685/5688/Creating+a+Custom+Profile" class="list-group-item list-name ng-scope">
+                      <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Creating a Custom Profile</strong></span>
+                  </a>
+                  <a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/video/test/9781783554157/5685/5686/The+User’s+Model" class="list-group-item list-name ng-scope">
+                      <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">The User’s Model</strong></span>
+                  </a>
+              </span>
+              <span ng-repeat="(key, value) in myBookmarks" class="ng-scope">
+                  <a href="/packtlib" class="list-group-item list-name disabled">
+                      <strong ng-bind-html="value.book.title" class="ng-binding">Learning Predictive Analytics with Python</strong>
+                      <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book.field_book_series">
+                        
+                      </span><br>
+                      <small class="pull-left ng-binding">By Ashish Kumar</small>
+                      <br>
+                      <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small><small ng-if="value.book.field_date_of_publication_value" class="pull-right mr10 ng-binding ng-scope">Feb 2016</small>
+                      <div class="clearfix">
+                      </div>
+                  </a>
+                  <a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/book/test/9781783983261/4" class="list-group-item list-name ng-scope">
+                      <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Chapter 4: Statistical Concepts for Predictive Modelling</strong></span>
+                  </a>
+              </span>
+              <span ng-repeat="(key, value) in myBookmarks" class="ng-scope">
+                  <a href="/packtlib" class="list-group-item list-name disabled">
+                      <strong ng-bind-html="value.book.title" class="ng-binding">Mastering JavaScript</strong>
+                      <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book.field_book_series">
+                      </span><br>
+                      <small class="pull-left ng-binding">By Ved Antani</small>
+                      <br>
+                      <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small><small ng-if="value.book.field_date_of_publication_value" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small>
+                      <div class="clearfix">
+                      </div>
+                  </a>
+                  <a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/book/test/9781785281341/pref05" class="list-group-item list-name ng-scope">
+                      <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Preface</strong></span>
+                  </a>
+              </span>
+          </ul>
+      </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="readinglist">
         Reading list goes here

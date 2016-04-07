@@ -92,6 +92,11 @@ a:focus, a:hover {
      color: none; 
      text-decoration: none; 
 }
+h1 small {
+  font-size: 12px;
+  font-family: Neuzeit, Helvetica, sans-serif;
+  text-transform: none;
+}
 .panel h1 {
   font-size: 45px;
 }
