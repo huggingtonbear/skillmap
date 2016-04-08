@@ -126,6 +126,20 @@ h3 small {
     vertical-align: middle;
     padding-top: 60px;
 }
+.navbar-form .form-group .form-control {
+    width: 165px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.navbar-form .form-group .form-control:focus,.navbar-form .form-group .form-control:active {
+    width: 350px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 .navbar-avatar-link {
     padding-bottom: 7px !important;
 }
