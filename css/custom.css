@@ -642,10 +642,13 @@ span.input-group-btn button.btn {
 }
 .skillcard {
   padding: 0px;
+  
+}
+.inner-skillcard {
+  display: table;
 }
 .left-skillcard {
     background-color: white;
-    float: none;
     display: table-cell;
     padding:  15px;
     padding-bottom: 20px;
@@ -660,6 +663,7 @@ span.input-group-btn button.btn {
     border-left: 1px solid #eee;
     float: none;
     display: table-cell;
+    padding: 15px;
     padding-bottom: 20px;
 }
 .breadcrumb.title-buttons > li + li:before {
