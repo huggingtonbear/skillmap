@@ -607,7 +607,7 @@ blockquote p {
     margin-bottom: 5px;
     font-size: 14px;
 }
-.jumbotron ol a:hover {
+.jumbotron ol a:hover,.jumbotron ol a:focus {
     text-decoration: none;
 }
 .panel.panel-default {
