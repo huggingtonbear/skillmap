@@ -100,8 +100,11 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15">
-                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
+                        <form class="col-sm-12 mt15 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
+                            <div class="input-group">
+                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="Search this title...">
+                               <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
+                            </div>
                         </form>
                         <div class="clearfix"></div>
                         <li class="active"><a href="front-page.html">Mastering JavaScript</a></li>
@@ -156,7 +159,7 @@
                       <li class="mt5">
                         <div class="btn-group" role="group">
                             <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fa fa-share fa-lg mr5"></i> Share
+                              <i class="fa fa-share fa-lg"></i>
                             </a>
                             <ul class="dropdown-menu">
                               <li class="disabled"><a class="disabled text-center"><b>Share</b></a></li>
@@ -176,144 +179,44 @@
             </div>
 
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8">
-                    
+                <div class="col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                     <div class="row">
-                        <div class="col-sm-3 hidden-xs">
-                            <div class="row">
-                            <img src="https://www.staging.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="img-responsive mt20 mb20"/>
-                            </div>
+                        <div class="col-sm-3">
+                            <a href="index.html"><img src="http://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/4709_1341OS_Mastering JavaScript.jpg" class="img-responsive"></a>
+                            <a href="index.html" class="btn btn-primary btn-block btn-lg mt20">Continue</a>
+                            <h3>Book Details</h3>
+                            <p><b>Author(s):</b> Ved Antani</p>
+                            <p><b>Release Date:</b> January 2016</p>
+                            <p><b>ISBN 13:</b> 9781783983704</p>
+                            <p><b>Time to Complete:</b> 10 hours 26 minutes</p>
                         </div>
-                        <div class="col-sm-9 hidden-xs">
-                            <h2>Mastering JavaScript</h2>
-                            <small>01/02/2015</small>
-                            <p>William Sherif</p>
-                            
-                            <div class="clearfix"></div>
-                            <div class="btn-group btn-group-justified mb15 hidden-xs mt15" role="group">                                 
-                                <a href="#" class="btn btn-default "><i class="fa fa-plus mr5"></i>Add to My List</a>      
-                                <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default dropdown-toggle hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <i class="fa fa-download fa-lg mr5"></i> Download eBook
-                                          <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                          <li><a href="#">Download ePub</a></li>
-                                          <li><a href="#">Download PDF</a></li>
-                                          <li><a href="#">Download Mobi</a></li>
-                                        </ul>
-                                </div>
-                                <a href="#" class="btn btn-default "><i class="fa fa-download mr5"></i> Code Files</a>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-share fa-lg mr5"></i><span class="hidden-xs"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">Facebook </a></li>
-                                      <li><a href="#">Email</a></li>
-                                      
-                                      <li><a href="#">Tweet</a></li>
-                                      <li><a href="#">Reddit</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p>Learn C++ programming with a fun, real-world application that allows you to create your own games!</p>
-                            <a href="for-loop.html" class="btn btn-primary btn-lg pl45 pr45 mt25 pull-right">Continue</a>
-
+                        <div class="col-sm-8">
+                            <h4>Explore and master modern JavaScript techniques in order to build large-scale web applications</h4>
+                            <h1 class="mt30 mb30">Book Description</h1>
+                            <p>JavaScript is a high-level, dynamic, untyped, lightweight, and interpreted programming language. Along with HTML and CSS, it is one of the three essential technologies of World Wide Web content production, and is an open source and cross-platform technology. The majority of websites employ JavaScript, and it is well supported by all modern web browsers without plugins. However, the JavaScript landscape has changed dramatically in recent years, and you need to adapt to the new world of JavaScript that people now expect. Mastering modern JavaScript techniques and the toolchain are essential to develop web-scale applications.
+                            </p>
+                            <p>Mastering JavaScript will be your companion as you master JavaScript and build innovative web applications. To begin with, you will get familiarized with the language constructs and how to make code easy to organize. You will gain a concrete understanding of variable scoping, loops, and best practices on using types and data structures, as well as the coding style and recommended code organization patterns in JavaScript. The book will also teach you how to use arrays and objects as data structures. You will graduate from intermediate-level skills to advanced techniques as you come to understand crucial language concepts and design principles. You will learn about modern libraries and tools so you can write better code.
+                            </p>
+                            <p>By the end of the book, you will understand how reactive JavaScript is going to be the new paradigm.</p>
+                            <h1 class="mt30 mb30">What you will learn</h1>
+                            <ul>
+                                <li>Get a run through of the basic JavaScript language constructs</li>
+                                <li>Get familiar with the Functions and Closures of JavaScript</li>
+                                <li>Explore Regular Expressions in JavaScript</li>
+                                <li>Code using the powerful object-oriented feature in JavaScript</li>
+                                <li>Test and debug your code using JavaScript strategies</li>
+                                <li>Master DOM manipulation, cross-browser strategies, and ES6</li>
+                                <li>Understand the basic concurrency constructs in Javascript and best performance strategies</li>
+                                <li>Learn to build scalable server application in JavaScript using Node.js</li>
+                            </ul>
+                            <h1 class="mt30 mb30">Authors</h1>
+                            <h4>Ved Antani</h4>
+                            <p>Ved Antani is an AVP (engineering) at Myntra. Before Myntra, he worked with Electronic Arts, NetApp, and Oracle. Ved is passionate about programming and has been programming in JavaScript since 2005. He has extensive experience in building scalable systems and mobile applications. Ved is a minimalist, a father, and an avid tea drinker.</p>
                         </div>
-
-                        <div class="titlepage visible-xs">
-                            <h4 class="title" style="clear: both"><a id="ch03lvl1sec27"></a>Learning C++ by Creating Games with UE4</h4>
-                            <hr>
-                            <small>01/02/2015</small>
-                            <p>William Sherif</p>
-                            <p>Learn C++ programming with a fun, real-world application that allows you to create your own games!</p>
-                            <a href="#" class="btn btn-default btn-block btn-lg"><i class="fa fa-plus mr5"></i> My List</a>      
-                            <a href="for-loop.html" class="btn btn-primary btn-lg btn-block mb20">Continue</a>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="row">
-                                <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt25    " role="tablist">
-                                    <li class="active">
-                                        <a href="#about" id="about-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn">Learn</a>
-                                    </li>
-                                    <li>
-                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail">Detail</a>
-                                    </li>
-                                    <li>
-                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author">Author</a>
-                                    </li>
-                                </ul>
-
-                                <div id="myTabContent" class="tab-content">
-                                    <div role="tabpanel" class="tab-pane fade in active pt30" id="about" aria-labelledby="about-tab">
-                                    <div class="visible-xs">
-                                        <h4 class="mobile-title">About</h4>
-                                        <hr>
-                                    </div>
-                                        <ul>
-                                            <li>Be a top programmer by being able to visualize programming concepts; how data is saved in computer memory, and how a program flows</li>
-                                            <li>Keep track of player inventory, create monsters, and keep those monsters at bay with basic spell casting by using your C++ programming skills within Unreal Engine 4</li>
-                                            <li>Understand the C++ programming concepts to create your own games</li>
-                                        </ul>
-                                        <p>If you are really passionate about games and have always wanted to write your own, this book is perfect for you. It will help you get started with programming in C++ and explore the immense functionalities of UE4.</p>
-
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="learn" aria-labelledby="learn-tab">
-                                    <div class="visible-xs">
-                                        <h4 class="mobile-title">Learn</h4>
-                                        <hr>
-                                    </div>
-                                        <ul>
-                                            <li>Visualize and truly understand C++ programming concepts, such as how data is saved in computer memory and how program flow works</li>
-                                            <li>Write reusable code by grouping lines of code into functions</li>
-                                            <li>Learn how inheritance works-how traits of a base class are passed on to derived classes</li>
-                                            <li>Learn about dynamic allocation of new memory for your program</li>
-                                            <li>Design your own world using the UE4 editor</li>
-                                            <li>Practice programming by coding behaviors into your game world, including player inventory tracking, monsters, and NPCs</li>
-                                            </ul> 
-                                    </div> 
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="detail" aria-labelledby="detail-tab">
-                                        <div class="visible-xs">
-                                            <h4 class="mobile-title">Detail</h4>
-                                            <hr>
-                                        </div>
-                                        <p>Unreal Engine 4 is used to create top notch, exciting games by AAA studios, and learning to program in C++ needs some serious motivation.</p>
-                                        <p>Learning C++ by Creating Games With UE4 will start with the basics of C++: installing a code editor so you can begin to write C++ code. You will then learn how to write small, self-contained C++ programs that show you how to use the C++ language, without overwhelming you with too much code at the beginning. As we dig into more advanced C++ concepts, you will start to explore the functionality the UE4 engine has to offer. You will use the UE4 editor to create your own world, and then program in some seriously fun gameplay. By the end of this book, you should have a good grasp of how to program in C++.</p>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="author" aria-labelledby="author-tab">
-                                        <div class="visible-xs">
-                                            <h4 class="mobile-title">Author</h4>
-                                            <hr>
-                                        </div>
-                                        <p><strong>William Sherif</strong></p>
-                                        <p>William Sherif is a C++ programmer with more than 8 years' programming experience. He has a wide range of experience in the programming world, from game programming to web programming. He has also worked as a university course instructor (sessional) for 7 years.</p>
-                                        <p>He has released several apps on to the iTunes store, including strum and MARSHALL OF THE ELITE SQUADRON.</p>
-                                        <p>In the past, he has won acclaim for delivering course material in an easy-to-understand manner.</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="text-center col-sm-12 mb20">
-                                    <small>ISBN 9781783983704 © Packt Publishing Limited. All Rights Reserved </small>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
-        <div id="footer" class="visible-xs">
-          <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
-              <div class="row" id="bottomNav" role="tablist">
-                <div class="col-xs-3 text-center"><a href="#about" id="about-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true"><i class="fa fa-book mobile-nav-icon fa-2x"></i></a></div>
-                <div class="col-xs-3 text-center"><a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn"><i class="fa fa-institution mobile-nav-icon fa-2x"></i></a></div>
-                <div class="col-xs-3 text-center"><a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail"><i class="fa fa-info-circle mobile-nav-icon fa-2x"></i></a></div>
-                <div class="col-xs-3 text-center"><a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="detail"><i class="fa fa-user mobile-nav-icon fa-2x"></i></a></div>
-              </div>
-          </div>
-        </div>
     </div>
 
     <!-- JAVASCRIPT BLOCKS -->

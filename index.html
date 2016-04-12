@@ -101,8 +101,11 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15">
-                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
+                        <form class="col-sm-12 mt15 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
+                            <div class="input-group">
+                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="Search this title...">
+                               <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
+                            </div>
                         </form>
                         <div class="clearfix"></div>
                         <li><a href="front-page.html" class="incomplete-section">Mastering JavaScript</a></li>
@@ -134,20 +137,63 @@
           <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <div class="pull-right btn-group mt45">
-                      <a href="#" class="btn btn-default"><i class="fa fa-bookmark-o fa-lg"></i></a>
-                      <a href="#" class="btn btn-default"><i class="fa fa-download fa-lg"></i></a>
-                      <a href="#" class="btn btn-default"><i class="fa fa-moon-o fa-lg"></i></a>
-                      <a href="#" class="btn btn-default"><i class="fa fa-font fa-lg"></i></a>
-                      <a href="#" class="btn btn-default "><i class="fa fa-share fa-lg"></i></a>
-                    </div>
                     <h1>The for loop</h1>
                     
 
-                    <ol class="breadcrumb row mt0">
-                      <li class=" mt5"><a href="#">Mastering JavaScript</a></li>
-                      <li class=" mt5"><a href="#">Chapter 3. Looping</a></li>
-                      <li class="active mt5">The for loop</li>
+                    <ol class="breadcrumb title-buttons row mt0">
+                      <li class="mt5"><a href="#" class="mr5"><i class="fa fa-bookmark-o fa-lg mr5"></i> Bookmark</a></li>
+                      <li class="mt5">
+                        <div class="btn-group" role="group">
+                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-shopping-cart fa-lg mr5"></i> Buy eBook
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="big-data-and-business-intelligence/r-deep-learning-essentials" target="_self">Buy from Store</a>
+                                </li>
+                                <li ng-show="tokens_available > 0" ng-if="login_status == true" class="ng-scope">
+                                    <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                </li>
+                                <li role="separator" class="divider ng-scope" ng-if="login_status == true"></li>
+                                <li class="disabled ng-scope" ng-if="login_status == true">
+                                    <a href="#">You have <strong class="ng-binding">4</strong> Token(s) Remaining</a>
+                                </li>
+                            </ul>
+                        </div>
+                      <li class="mt5"><a href="#" class=""><i class="fa fa-moon-o fa-lg"></i></a></li>
+                      <li class="mt5">
+                        <div class="btn-group" role="group">
+                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-font fa-lg"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li class="disabled"><a class="disabled text-center"><b>Font Size (rem)</b></a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">1.5 </a></li>
+                              <li><a href="#">1.6</a></li>
+                              <li><a href="#">1.7</a></li>
+                              <li><a href="#">1.8</a></li>
+                              <li><a href="#">1.9</a></li>
+                              <li><a href="#">2.0</a></li>
+                            </ul>
+                        </div>
+                      </li>
+                      <li class="mt5">
+                        <div class="btn-group" role="group">
+                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-share fa-lg"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li class="disabled"><a class="disabled text-center"><b>Share</b></a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Facebook </a></li>
+                              <li><a href="#">Email</a></li>
+                              
+                              <li><a href="#">Tweet</a></li>
+                              <li><a href="#">Reddit</a></li>
+                            </ul>
+                        </div>
+
                     </ol>
                   </div>
 
