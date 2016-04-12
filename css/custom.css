@@ -640,6 +640,21 @@ span.input-group-btn button.btn {
 .sm-card-icon {
     font-size: 48px;
 }
+.skillcard {
+  padding: 0px;
+}
+.left-skillcard {
+    background-color: white;
+    float: none;
+    display: table-cell;
+    padding:  15px;
+}
+.right-skillcard {
+    background-color: white;
+    border-left: 1px solid #eee;
+    float: none;
+    display: table-cell;
+}
 .breadcrumb.title-buttons > li + li:before {
     padding: 0 5px;
     color: #ccc;
