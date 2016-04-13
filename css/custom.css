@@ -172,7 +172,7 @@ h1, .h1 {
  	text-align: center;
 }
 .modal-content {
-	border: 5px solid rgba(224, 123, 68,0.7);
+	border: 5px solid rgba(220, 220, 220, 0.7);
 }
 
 /*Custom Reader Style*/
@@ -268,9 +268,6 @@ h1, .h1 {
 }
 .modal-footer {
     text-align: center;
-}
-.modal-content {
-    border: 5px solid rgba(224, 123, 68,0.7);
 }
 .list-name {
     white-space: nowrap;
