@@ -556,7 +556,7 @@ blockquote p {
 }
 .jumbotron h1 {
   font-weight: 100;
-  font-size: 36px;
+  font-size: 24px;
 }
 @media(min-width:768px) {
     .reader-container p {
@@ -566,7 +566,7 @@ blockquote p {
     }
     .jumbotron h1 {
       font-weight: 100;
-      font-size: 48px;
+      font-size: 36px;
   }
 }
 .jumbotron ol {
