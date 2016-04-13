@@ -43,7 +43,24 @@
 </head>
 
 <body class="language-markup">
-
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Remove Card</h4>
+      </div>
+      <div class="modal-body">
+              <p>Are you sure you want to remove this card?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
   
 
     <div id="wrapper">
@@ -125,7 +142,7 @@
                               <!-- Skill Card Start -->
                               <div class="panel panel-default">
                                 <div class="panel-heading clickable" data-toggle="collapse" href="#showCard" data-parent="#accordion">
-                                    <button type="button" class="close"><span aria-hidden="true">×</span></button>
+                                    <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                     <h1 class="mt0"><i class="devicon-python-plain mr15"></i> Python Fundamentals <small class="ml10 title-duration"><i class="fa fa-clock-o mr5"></i>10 hours 20 minutes</small></h1>
                                 </div>
                                 <div class="collapse in" id="showCard">
@@ -161,7 +178,7 @@
                           <!-- Skill Card Start -->
                               <div class="panel panel-default">
                                 <div class="panel-heading clickable" data-toggle="collapse" href="#showCard1" data-parent="#accordion">
-                                    <button type="button" class="close"><span aria-hidden="true">×</span></button>
+                                    <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
                                     <h1 class="mt0"><i class="devicon-python-plain mr15"></i> High Performance Python <small class="ml10 title-duration"><i class="fa fa-clock-o mr5"></i>13 hours 45 minutes</small></h1>
                                 </div>
                                 <div class="collapse" id="showCard1">
@@ -194,7 +211,7 @@
                           <!-- Skill Card Start -->
                               <div class="panel panel-default">
                                 <div class="panel-heading clickable" data-toggle="collapse" href="#showCard2" data-parent="#accordion">
-                                    <button type="button" class="close"><span aria-hidden="true">×</span></button>
+                                    <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
                                     <h1 class="mt0"><i class="devicon-django-plain mr15"></i> Production Ready Django  <small class="ml10 title-duration"><i class="fa fa-clock-o mr5"></i>20 hours 10 minutes</small></h1>
                                 </div>
                                 <div class="collapse" id="showCard2">
