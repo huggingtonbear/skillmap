@@ -66,13 +66,11 @@
                     <li>Write Python scripts to automate daily tasks, and other software</li>
                     <li>Use unit tests to write better code, faster</li>
                   </ul>
-              <hr>
-              <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
             </div>
           </div>
       </div>
       <div class="modal-footer">
-        <a href="dashboard.html" class="btn btn-primary">Add to In Progress<i class="fa fa-refresh ml10"></i></a>
+        <a href="#" class="btn btn-default btn-block mt15">Select Skill</a>
       </div>
     </div>
   </div>
@@ -145,10 +143,11 @@
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1>Cards</h1>
+                    <h1>Select Skills</h1>
                     <ol class="breadcrumb row mt0">
                       <li><a href="select-goal.html">Select Goal</a></li>
-                      <li class="active mt5">All Cards</li>
+                      <li><a href="select-sector.html">Select Industry</a></li>
+                      <li class="active mt5">Select Skills</li>
                     </ol>
                   </div>
                 </div>
@@ -156,257 +155,299 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="col-sm-12 col-xl-offset-2 col-xl-8">
+                          <h3 class="text-center mb30 mt0">Please select the <b> Skills</b> you currently have</h3>
                           <div class="btn-group filters-btn-group mb20">
                             <button class="btn btn-default active" data-filter="*">Show All</button>
                             <button class="btn btn-default" data-filter=".program">Programming</button>
                             <button class="btn btn-default" data-filter=".dev">Development</button>
                             <button class="btn btn-default" data-filter=".admin">Administration</button>
-                            <button class="btn btn-default" data-filter=":ss">Soft Skills</button>
                             <button class="btn btn-default" data-filter=".tech">Technical Concepts and Tasks</button>
                           </div>
 
                           <div class="grid row">
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-python-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Python Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-python-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>High Performance Python</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-python-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Unlocking Python Objects</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-python-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Testing Python</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item tech col-sm-3" data-category="tech">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-python-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Data Analysis with Python</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-django-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Production Ready Django</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-django-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Django Up To Speed</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-java-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Reactive Java Programming</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-java-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>RESTful Java Programming</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-android-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Android Development Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-android-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Android UI Design</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-android-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Advanced Android Development</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-android-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Android High Performance Programming</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-android-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Android Studio Basics</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-git-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Git Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-confluence-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Jira Administration</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-confluence-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Jira Administration</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item admin col-sm-3" data-category="admin">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-docker-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>Docker Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-mysql-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>MySQL Basics</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
                             <div class="element-item admin col-sm-3" data-category="admin">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
+                              <div class="panel panel-default text-center">
                                 <div class="panel-title mt20">
                                   <i class="devicon-mysql-plain sm-card-icon"></i>
                                 </div>
                                 <div class="panel-body">
                                   <h4>MySQL Administration</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
+                            
                           </div>
+                          <a href="dashboard-profile.html" class="btn btn-primary pull-right btn-lg mt20 mb20">Finish</a>
                         </div>
                   </div><!-- row -->
 			</div><!-- /#book-wrapper -->
