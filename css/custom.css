@@ -552,11 +552,14 @@ blockquote p {
 
 /* New CSS Rules for Skills Platform */
 .jumbotron.heading {
-    padding-bottom: 0;
+    padding-bottom: 15px;
+    padding-top: 65px;
+    background: #677280;
 }
 .jumbotron h1 {
   font-weight: 100;
   font-size: 24px;
+  color: white;
 }
 @media(min-width:768px) {
     .reader-container p {
@@ -575,11 +578,28 @@ blockquote p {
     margin-bottom: 5px;
     font-size: 14px;
 }
+.jumbotron ol>li {
+      color: rgba(255,255,255,0.7) !important;
+}
 .jumbotron ol a:hover,.jumbotron ol a:focus {
     text-decoration: none;
 }
-.panel.panel-default {
+.panel.panel-default, .panel.panel-default>.panel-heading {
     border-radius: 0px;
+}
+.panel.panel-default>.panel-heading {
+  background-color:#677280;
+  color: white;
+}
+.panel.panel-default>.panel-heading>.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #FFF;
+    text-shadow: none;
+    filter: alpha(opacity=20);
+    opacity: .5;
 }
 .sidebar-nav>.panel.panel-default {
     border-radius: 0px;
@@ -669,5 +689,39 @@ span.input-group-btn button.btn {
     font-family: fontAwesome;
     content: "\00a0";
 }
+.tech-icon {
+  height:60px;
+  padding: 5px;
+  float: left;
+  margin-right: 10px;
+}
+.card-heading {
+  margin-top: 15px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+.python {
+  background: #2b5b84 !important
+}
+.django {
+  background: #092e20 !important
+}
 .morris-hover{position:absolute;z-index:1000}.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#666;background:rgba(255,255,255,0.8);border:solid 2px rgba(230,230,230,0.8);font-family:sans-serif;font-size:12px;text-align:center}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0}
 .morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0}
+/* Navbar */
+/*.navbar-default {
+    background-color: #C64556;
+    border-color: #B33747;
+}
+.navbar-default .navbar-brand {
+    color: #FFF;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: #A93645;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+}
+*/

@@ -28,15 +28,15 @@
     margin-left: -250px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #f5f5f5;
+    background: #465261;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    box-shadow: inset -3px 1px 9px -4px #ABABAB;
+    /*box-shadow: inset -3px 1px 9px -4px #ABABAB;
     -webkit-box-shadow: inset -3px 1px 9px -4px #ABABAB;
     -moz-box-shadow: inset -3px 1px 9px -4px #ABABAB;
-    -o-box-shadow: inset -3px 1px 9px -4px #ABABAB;
+    -o-box-shadow: inset -3px 1px 9px -4px #ABABAB;*/
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -79,7 +79,7 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #888;
+    color: #fff;
     font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
