@@ -584,6 +584,9 @@ blockquote p {
 .jumbotron ol a:hover,.jumbotron ol a:focus {
     text-decoration: none;
 }
+.jumbotron ol a {
+    color: rgba(255,255,255,0.9);
+}
 .panel.panel-default, .panel.panel-default>.panel-heading {
     border-radius: 0px;
 }
