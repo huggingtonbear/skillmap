@@ -75,7 +75,12 @@
     text-indent: 25px;
     line-height: 35px;
 }
-
+.sidebar-nav h4 {
+    color: white;
+}
+.sidebar-nav hr {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
