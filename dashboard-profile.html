@@ -236,54 +236,46 @@
                                     <button class="btn btn-default" data-filter=".program">Programming</button>
                                     <button class="btn btn-default" data-filter=".dev">Development</button>
                                     <button class="btn btn-default" data-filter=".admin">Administration</button>
-                                    <button class="btn btn-default" data-filter=":ss">Soft Skills</button>
+                                    <button class="btn btn-default" data-filter="ss">Soft Skills</button>
                                     <button class="btn btn-default" data-filter=".tech">Technical Concepts and Tasks</button>
                                   </div>
                                 <div class="grid row">
                                     <!-- Skill Card -->
-                                    <div class="element-item program col-sm-3" data-category="program">
-                                      <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                        <div class="panel-title mt20">
-                                          <i class="devicon-django-plain sm-card-icon"></i>
-                                        </div>
-                                        <div class="panel-body">
-                                          <h4>Django Up To Speed</h4>
+                                    <div class="element-item program col-sm-3 col-xl-2" data-category="program">
+                                      <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                        <div class="panel-heading django">
+                                            <img class="tech-icon" src="images/tech/django.png"/>
+                                            <h1 class="sm-card-heading">Django Up To Speed</h1>
                                         </div>
                                       </div>
                                     </div>
                                     <!-- Skill Card END -->
                                     <!-- Skill Card -->
-                                    <div class="element-item program col-sm-3" data-category="program">
-                                      <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                        <div class="panel-title mt20">
-                                          <i class="devicon-java-plain sm-card-icon"></i>
-                                        </div>
-                                        <div class="panel-body">
-                                          <h4>Reactive Java Programming</h4>
+                                    <div class="element-item program col-sm-3 col-xl-2" data-category="program">
+                                      <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                        <div class="panel-heading java">
+                                            <img class="tech-icon" src="images/tech/java.png"/>
+                                            <h1 class="sm-card-heading">Reactive Java Programming</h1>
                                         </div>
                                       </div>
                                     </div>
                                     <!-- Skill Card END -->
                                     <!-- Skill Card -->
-                                    <div class="element-item program col-sm-3" data-category="program">
-                                      <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                        <div class="panel-title mt20">
-                                          <i class="devicon-java-plain sm-card-icon"></i>
-                                        </div>
-                                        <div class="panel-body">
-                                          <h4>RESTful Java Programming</h4>
+                                    <div class="element-item program col-sm-3 col-xl-2" data-category="program">
+                                      <div class="panel panel-default text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                         <div class="panel-heading java">
+                                            <img class="tech-icon" src="images/tech/java.png"/>
+                                            <h1 class="sm-card-heading">RESTful Java Programming</h1>
                                         </div>
                                       </div>
                                     </div>
                                     <!-- Skill Card END -->
                                     <!-- Skill Card -->
-                                    <div class="element-item admin col-sm-3" data-category="admin">
-                                      <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                        <div class="panel-title mt20">
-                                          <i class="devicon-mysql-plain sm-card-icon"></i>
-                                        </div>
-                                        <div class="panel-body">
-                                          <h4>MySQL Administration</h4>
+                                    <div class="element-item admin col-sm-3 col-xl-2" data-category="admin">
+                                      <div class="panel panel-default text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                        <div class="panel-heading mysql">
+                                            <img class="tech-icon" src="images/tech/mysql.png"/>
+                                            <h1 class="sm-card-heading">MySQL Administration</h1>
                                         </div>
                                       </div>
                                     </div>
@@ -339,11 +331,11 @@
 
   
     // change is-checked class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
+  $('.btn-group').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
     $buttonGroup.on( 'click', 'button', function() {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
+      $buttonGroup.find('.active').removeClass('active');
+      $( this ).addClass('active');
     });
   });
   
