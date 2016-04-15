@@ -661,7 +661,7 @@ span.input-group-btn button.btn {
     padding-bottom: 20px;
 }
 .top-skillcard {
-    background-color: white;
+    background-color: whitesmoke;
     padding:  15px;
     border-bottom: 1px solid #eee;
 }
@@ -696,6 +696,23 @@ span.input-group-btn button.btn {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
+}
+.left-skillcard li {
+  list-style-type: none !important;
+    line-height: 1.6em;
+  margin-bottom: 15px;
+}
+.left-skillcard ul {
+  padding-left: 10px;
+}
+.left-skillcard li:before {
+  font-family: FontAwesome;
+  content: "\f138";
+  font-size: 28px;
+  vertical-align: middle;
+  float: left;
+  margin-right: 10px;
+  color: #7E8B9A;
 }
 .sm-card {
   height: 320px;
