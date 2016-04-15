@@ -657,7 +657,7 @@ span.input-group-btn button.btn {
 .left-skillcard {
     background-color: white;
     display: table-cell;
-    padding:  40px;
+    padding:  30px;
     padding-bottom: 20px;
 }
 .top-skillcard {
@@ -699,7 +699,7 @@ span.input-group-btn button.btn {
 }
 .left-skillcard li {
   list-style-type: none !important;
-    line-height: 1.6em;
+    line-height: 2em;
   margin-bottom: 15px;
 }
 .left-skillcard ul {
