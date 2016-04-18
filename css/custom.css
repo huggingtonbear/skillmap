@@ -731,21 +731,22 @@ span.input-group-btn button.btn {
   padding-bottom: 0px;
 }
 .sm-card {
-  height: 320px;
 }
 .python {
+  border:none;
   border-left: 15px solid #2b5b84 !important;
 }
 .mysql {
+  border:none;
   border-left: 15px solid #f8981d !important;
 } 
-.python{
-  border-left: 15px solid #2b5b84 !important;
-}
+
 .django {
+  border:none;
   border-left: 15px solid #092e20 !important;
 }
 .java {
+  border:none;
   border-left: 10px solid #2962B0  !important;
 }
 .morris-hover{position:absolute;z-index:1000}.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#666;background:rgba(255,255,255,0.8);border:solid 2px rgba(230,230,230,0.8);font-family:sans-serif;font-size:12px;text-align:center}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0}
