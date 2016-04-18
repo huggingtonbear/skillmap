@@ -588,6 +588,23 @@ blockquote p {
 .jumbotron ol a {
     color: rgba(255,255,255,0.9);
 }
+.jumbotron .progress {
+  height: 3px;
+  margin:0;
+  width: 60%
+}
+.jumbotron .thumbnail {
+  margin-top: 70px;
+  margin-bottom: -10px;
+  background: none;
+  color: #eee;
+  border: none;
+}
+.jumbotron .thumbnail span {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
 .panel.panel-default, .panel.panel-default>.panel-heading {
     border-radius: 0px;
 }
