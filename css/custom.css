@@ -662,7 +662,9 @@ span.input-group-btn button.btn {
 }
 .top-skillcard {
     background-color: whitesmoke;
-    padding:  15px;
+    padding:  25px;
+    padding-left: 40px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
 .right-skillcard {
@@ -700,7 +702,7 @@ span.input-group-btn button.btn {
 .left-skillcard li {
   list-style-position: outside;
 
-  line-height: 2em;
+  line-height: 1.8em;
   background: url(images/bullet.png) no-repeat left top;
   padding: 0px 0px 10px 35px;
   /* reset styles (optional): */
@@ -708,25 +710,26 @@ span.input-group-btn button.btn {
   margin: 0;
 }
 .left-skillcard ul {
-  padding-left: 10px;
+  padding: 20px;
+  padding-bottom: 0px;
 }
 .sm-card {
   height: 320px;
 }
 .python {
-  border-bottom: 10px solid #2b5b84 !important;
+  border-left: 15px solid #2b5b84 !important;
 }
 .mysql {
-  border-bottom: 10px solid #f8981d !important;
+  border-left: 15px solid #f8981d !important;
 } 
 .python{
-  border-bottom: 10px solid #2b5b84 !important;
+  border-left: 15px solid #2b5b84 !important;
 }
 .django {
-  border-bottom: 10px solid #092e20 !important;
+  border-left: 15px solid #092e20 !important;
 }
 .java {
-  border-bottom: 10px solid #2962B0  !important;
+  border-left: 10px solid #2962B0  !important;
 }
 .morris-hover{position:absolute;z-index:1000}.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#666;background:rgba(255,255,255,0.8);border:solid 2px rgba(230,230,230,0.8);font-family:sans-serif;font-size:12px;text-align:center}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0}
 .morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0}
