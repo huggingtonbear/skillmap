@@ -716,7 +716,7 @@ span.input-group-btn button.btn {
   width: auto;
   padding: 5px;
 }
-.img-thumbnail.tech-icon-sm {
+.img-thumbnail.tech-icon-sm,.img-thumbnail.tech-icon {
   padding: 0px;
 }
 .card-heading {
