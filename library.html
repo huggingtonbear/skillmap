@@ -14,7 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -59,11 +59,10 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo active" href="dashboard.html"><i class="fa fa-map fa-lg mr5 pl35"></i><b> MAPT</b></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="dashboard.html"><i class="fa fa-dashboard fa-lg mr5"></i> Dashboard</a></li>
-                        <li class="active"><a href="library.html"><i class="fa fa-archive fa-lg mr5"></i> Library</a></li>
                         <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
@@ -95,37 +94,14 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <h4 class="ml15 mt20"> Browse Topics:</h4>
-                <hr>
-                <li>    <a href="tech-page.html">    Android </a>    </li>
-                <li>    <a href="tech-page.html">    AngularJS   </a>    </li>
-                <li>    <a href="tech-page.html">    Arduino </a>    </li>
-                <li>    <a href="tech-page.html">    Blender </a>    </li>
-                <li>    <a href="tech-page.html">    Bootstrap   </a>    </li>
-                <li>    <a href="tech-page.html">    Django  </a>    </li>
-                <li>    <a href="tech-page.html">    Docker  </a>    </li>
-                <li>    <a href="tech-page.html">    Drupal  </a>    </li>
-                <li>    <a href="tech-page.html">    Hadoop  </a>    </li>
-                <li>    <a href="tech-page.html">    iOS </a>    </li>
-                <li>    <a href="tech-page.html">    Java    </a>    </li>
-                <li>    <a href="tech-page.html">    JavaScript  </a>    </li>
-                <li>    <a href="tech-page.html">    jQuery  </a>    </li>
-                <li>    <a href="tech-page.html">    Laravel </a>    </li>
-                <li>    <a href="tech-page.html">    Linux   </a>    </li>
-                <li>    <a href="tech-page.html">    Machine Learning    </a>    </li>
-                <li>    <a href="tech-page.html">    Node.js </a>    </li>
-                <li>    <a href="tech-page.html">    OpenCV  </a>    </li>
-                <li>    <a href="tech-page.html">    OpenStack   </a>    </li>
-                <li>    <a href="tech-page.html">    Oracle  </a>    </li>
-                <li>    <a href="tech-page.html">    PHP </a>    </li>
-                <li>    <a href="tech-page.html">    Python  </a>    </li>
-                <li>    <a href="tech-page.html">    QlikView    </a>    </li>
-                <li>    <a href="tech-page.html">    R   </a>    </li>
-                <li>    <a href="tech-page.html">    Spark   </a>    </li>
-                <li>    <a href="tech-page.html">    Spring  </a>    </li>
-                <li>    <a href="tech-page.html">    Swift   </a>    </li>
-                <li>    <a href="tech-page.html">    Unity   </a>    </li>
-                <li>    <a href="tech-page.html">    WordPress   </a>    </li>
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">In Progress</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    
+                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills Profile </span><span class="pull-right mr5"><i class="fa fa-line-chart fa-lg"></i></span></a>    
+                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Goals  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    
+                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    
+                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    
+                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    
+                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    
+                
             </ul>
         </div>
 
@@ -144,7 +120,45 @@
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
-                      <div class="col-sm-6 col-lg-5">
+                  <div class="col-sm-12">
+                      <div class="col-sm-3 col-lg-2">
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Browse Topics</h4></div>
+                          <ul class="list-group">
+                            <a class="list-group-item" href="tech-page.html">    Android </a>    
+                            <a class="list-group-item" href="tech-page.html">    AngularJS   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Arduino </a>    
+                            <a class="list-group-item" href="tech-page.html">    Blender </a>    
+                            <a class="list-group-item" href="tech-page.html">    Bootstrap   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Django  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Docker  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Drupal  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Hadoop  </a>    
+                            <a class="list-group-item" href="tech-page.html">    iOS </a>    
+                            <a class="list-group-item" href="tech-page.html">    Java    </a>    
+                            <a class="list-group-item" href="tech-page.html">    JavaScript  </a>    
+                            <a class="list-group-item" href="tech-page.html">    jQuery  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Laravel </a>    
+                            <a class="list-group-item" href="tech-page.html">    Linux   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Machine Learning    </a>    
+                            <a class="list-group-item" href="tech-page.html">    Node.js </a>    
+                            <a class="list-group-item" href="tech-page.html">    OpenCV  </a>    
+                            <a class="list-group-item" href="tech-page.html">    OpenStack   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Oracle  </a>    
+                            <a class="list-group-item" href="tech-page.html">    PHP </a>    
+                            <a class="list-group-item" href="tech-page.html">    Python  </a>    
+                            <a class="list-group-item" href="tech-page.html">    QlikView    </a>    
+                            <a class="list-group-item" href="tech-page.html">    R   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Spark   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Spring  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Swift   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Unity   </a>    
+                            <a class="list-group-item" href="tech-page.html">    WordPress   </a>    
+                          </ul>
+                        </div> 
+                      </div>
+                      <div class="col-sm-9 col-lg-4">
                           <div ng-show="last_viewed.title" class="panel panel-default">
                               <div class="panel-heading">
                                   <h3 class="panel-title">You last viewed:</h3>
@@ -185,7 +199,7 @@
                               </div>
                           </div><!-- end ngIf: sub && !freetrial -->
                       </div>
-                      <div class="col-sm-6 col-lg-7">
+                      <div class="col-sm-9 col-lg-6">
                           <ul id="recommendationTabs" class="nav nav-pills nav-stacked text-center mt25 mb25 visible-xs" role="tablist">
                               <li class="active">
                                   <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular Courses</a>
@@ -399,7 +413,7 @@
 
                           </div>
                       </div>
-                      <div class="col-sm-12">
+                      <div class="col-sm-9 col-lg-10">
                           <h3 class="mt5">Trending Topics </h3>
                           <hr>
                           <div class="col-xs-6 col-sm-4 col-lg-2">
@@ -465,6 +479,7 @@
                               </div>
                           </div>
                       </div>
+                    </div>
                 </div><!-- row -->
 			</div><!-- /#book-wrapper -->
 		</div><!-- /#page-content-wrapper -->

@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -54,11 +54,10 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo active" href="dashboard.html"><i class="fa fa-map fa-lg mr5 pl35"></i><b> MAPT</b></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="dashboard.html"><i class="fa fa-dashboard fa-lg mr5"></i> Dashboard</a></li>
-                        <li class="active"><a href="library.html"><i class="fa fa-archive fa-lg mr5"></i> Library</a></li>
                         <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
@@ -90,58 +89,72 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <h4 class="ml15 mt20"> Browse Categories:</h4>
-                <hr>
-                <li>    <a href="#">    Android </a>    </li>
-                <li>    <a href="#">    AngularJS   </a>    </li>
-                <li>    <a href="#">    Arduino </a>    </li>
-                <li>    <a href="#">    Blender </a>    </li>
-                <li>    <a href="#">    Bootstrap   </a>    </li>
-                <li>    <a href="#">    Django  </a>    </li>
-                <li>    <a href="#">    Docker  </a>    </li>
-                <li>    <a href="#">    Drupal  </a>    </li>
-                <li>    <a href="#">    Hadoop  </a>    </li>
-                <li>    <a href="#">    iOS </a>    </li>
-                <li>    <a href="#">    Java    </a>    </li>
-                <li class="active">    <a href="#">    JavaScript  </a>    </li>
-                <li>    <a href="#">    jQuery  </a>    </li>
-                <li>    <a href="#">    Laravel </a>    </li>
-                <li>    <a href="#">    Linux   </a>    </li>
-                <li>    <a href="#">    Machine Learning    </a>    </li>
-                <li>    <a href="#">    Node.js </a>    </li>
-                <li>    <a href="#">    OpenCV  </a>    </li>
-                <li>    <a href="#">    OpenStack   </a>    </li>
-                <li>    <a href="#">    Oracle  </a>    </li>
-                <li>    <a href="#">    PHP </a>    </li>
-                <li>    <a href="#">    Python  </a>    </li>
-                <li>    <a href="#">    QlikView    </a>    </li>
-                <li>    <a href="#">    R   </a>    </li>
-                <li>    <a href="#">    Spark   </a>    </li>
-                <li>    <a href="#">    Spring  </a>    </li>
-                <li>    <a href="#">    Swift   </a>    </li>
-                <li>    <a href="#">    Unity   </a>    </li>
-                <li>    <a href="#">    WordPress   </a>    </li>
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">In Progress</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    
+                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills Profile </span><span class="pull-right mr5"><i class="fa fa-line-chart fa-lg"></i></span></a>    
+                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Goals  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    
+                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    
+                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    
+                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    
+                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    
+                
             </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
 
-        <div id="page-content-wrapper" class="book-page ng-scope">
+        <div id="page-content-wrapper" class="">
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
                     <h1>JavaScript</h1>
                     <ol class="breadcrumb row mt0">
-                        <li><a href="library.html">Courses</a></li>
-                        <li class="active mt5">JavaScript</li>
+                      <li class="mt5"><a href="library.html">Courses</a></li>
+                      <li class="active mt5">JavaScript</li>
                     </ol>
                   </div>
                 </div>
             </div>
-            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-6">
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
+                  <div class="col-sm-12">
+                      <div class="col-sm-3 col-lg-2">
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Browse Topics</h4></div>
+                          <ul class="list-group">
+                            <a class="list-group-item" href="tech-page.html">    Android </a>    
+                            <a class="list-group-item" href="tech-page.html">    AngularJS   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Arduino </a>    
+                            <a class="list-group-item" href="tech-page.html">    Blender </a>    
+                            <a class="list-group-item" href="tech-page.html">    Bootstrap   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Django  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Docker  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Drupal  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Hadoop  </a>    
+                            <a class="list-group-item" href="tech-page.html">    iOS </a>    
+                            <a class="list-group-item" href="tech-page.html">    Java    </a>    
+                            <a class="list-group-item active" href="tech-page.html">    JavaScript  </a>    
+                            <a class="list-group-item" href="tech-page.html">    jQuery  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Laravel </a>    
+                            <a class="list-group-item" href="tech-page.html">    Linux   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Machine Learning    </a>    
+                            <a class="list-group-item" href="tech-page.html">    Node.js </a>    
+                            <a class="list-group-item" href="tech-page.html">    OpenCV  </a>    
+                            <a class="list-group-item" href="tech-page.html">    OpenStack   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Oracle  </a>    
+                            <a class="list-group-item" href="tech-page.html">    PHP </a>    
+                            <a class="list-group-item" href="tech-page.html">    Python  </a>    
+                            <a class="list-group-item" href="tech-page.html">    QlikView    </a>    
+                            <a class="list-group-item" href="tech-page.html">    R   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Spark   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Spring  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Swift   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Unity   </a>    
+                            <a class="list-group-item" href="tech-page.html">    WordPress   </a>    
+                          </ul>
+                        </div> 
+                      </div>
+                        <div class="col-sm-9 col-lg-5">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Latest JavaScript Courses</h3>
@@ -195,7 +208,7 @@
                                         </ul>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-9 col-lg-5">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Most Popular JavaScript Courses</h3>

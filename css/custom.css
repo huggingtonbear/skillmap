@@ -116,6 +116,11 @@ h1, .h1 {
 	background-color: #465261;
   color: white;
 }
+.sidebar-nav>li>h5 {
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  font-size: 16px;
+}
 .tabbed-content {
 	border-top-right-radius: 0px;
     border-top-left-radius: 0px;
@@ -767,3 +772,22 @@ span.input-group-btn button.btn {
 .morris-hover{position:absolute;z-index:1000}.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#666;background:rgba(255,255,255,0.8);border:solid 2px rgba(230,230,230,0.8);font-family:sans-serif;font-size:12px;text-align:center}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0}
 .morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0}
 
+.brand-logo {
+  color: #677280;
+  width: 200px;
+  margin-left: -1px;
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.brand-logo.active {
+  background: #E7E7E7;
+}
+.brand-logo:hover,
+.brand-logo:focus {
+  text-decoration: none;
+  color: #677280;
+  background: rgba(0,0,0,0.1);
+}
