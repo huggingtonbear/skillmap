@@ -595,8 +595,7 @@ blockquote p {
 }
 .jumbotron .progress {
   height: 3px;
-  margin:0;
-  width: 60%
+  margin-bottom: 0px;
 }
 .jumbotron .thumbnail {
   margin-top: 70px;
