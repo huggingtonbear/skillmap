@@ -795,6 +795,11 @@ span.input-group-btn button.btn {
   font-size: 18px;
   line-height: 20px;
 }
+@media(min-width:1400px) {
+  .brand-logo {
+  width: 250px;
+  }
+}
 .brand-logo.active {
   background: #E7E7E7;
 }
