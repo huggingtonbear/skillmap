@@ -645,6 +645,9 @@ blockquote p {
 .clickable:hover {
     cursor:pointer 
 }
+.clickable {
+  cursor:pointer;
+}
 span.input-group-btn button.btn {
     height: 34px;
     padding-top: 8px;
