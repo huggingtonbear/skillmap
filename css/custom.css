@@ -746,6 +746,14 @@ span.input-group-btn button.btn {
   padding-bottom: 0px;
 }
 .sm-card {
+  height: 175px;
+  width: 100%;
+}
+.sm-card>.panel-heading {
+  display: table-cell;
+  vertical-align: middle;
+  height: 173px;
+  width: 1000px;
 }
 .python {
   border:none;
