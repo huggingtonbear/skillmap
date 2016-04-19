@@ -47,18 +47,19 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h1 class="mt10 mb10"><i class="devicon-python-plain mr15"></i> Python Fundamentals</h1>
+      <div class="modal-header python">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <img class="tech-icon img-thumbnail" src="images/tech/python.png"> 
+                                    <h1 class="card-heading">Python Fundamentals </h1>
       </div>
-      <div class="modal-body">
+      <div class="modal-body python">
         <div class="panel-body">
             <div class="col-sm-12">
               <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
               <hr>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-12 left-skillcard mb20">
                   <ul class="learning-points">
                     <li>Install and set up Python on Mac, Windows or Linux</li>
                     <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
@@ -66,12 +67,11 @@
                     <li>Write Python scripts to automate daily tasks, and other software</li>
                     <li>Use unit tests to write better code, faster</li>
                   </ul>
-              <hr>
-              <a href="dashboard2.html" class="btn btn-success pull-right">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+              <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
             </div>
           </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer python">
         <a href="dashboard.html" class="btn btn-primary">Add to In Progress<i class="fa fa-refresh ml10"></i></a>
       </div>
     </div>
@@ -153,7 +153,8 @@
                   </div>
                 </div>
             </div>
-            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid"> 
+              <div class="col-sm-12">             
                 <div class="row">
                         <div class="col-sm-12">
                           <div class="input-group mb20">
@@ -171,241 +172,240 @@
 
                           <div class="grid row">
                             <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-python-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Python Fundamentals</h4>
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading python">
+                                      <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
+                                      <h1 class="sm-card-heading">Python Fundamentals</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-python-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>High Performance Python</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-python-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Unlocking Python Objects</h4>
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading python">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">High Performance Python</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-python-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Testing Python</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3" data-category="tech">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-python-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Data Analysis with Python</h4>
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading python">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Unlocking Python Objects</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-django-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Production Ready Django</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-django-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Django Up To Speed</h4>
+                            <div class="element-item dev col-sm-3 col-lg-2" data-category="dev">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading python">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Testing Python</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-java-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Reactive Java Programming</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3" data-category="program">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-java-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>RESTful Java Programming</h4>
+                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading python">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Data Analysis with Python</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-android-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Android Development Fundamentals</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-android-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Android UI Design</h4>
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading django">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/django.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Production Ready Django</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-android-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Advanced Android Development</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-android-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Android High Performance Programming</h4>
+                            <div class="element-item dev col-sm-3 col-lg-2" data-category="dev">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading django">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/django.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Django Up to Speed</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-android-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Android Studio Basics</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-git-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Git Fundamentals</h4>
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading java">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/java.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Reactive Java Programming</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-confluence-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Jira Administration</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item software col-sm-3" data-category="software">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-confluence-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Jira Administration</h4>
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading java">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/java.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">RESTful Java Programming</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item admin col-sm-3" data-category="admin">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-docker-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>Docker Fundamentals</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3" data-category="dev">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-mysql-plain sm-card-icon"></i>
-                                </div>
-                                <div class="panel-body">
-                                  <h4>MySQL Basics</h4>
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading java">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/java.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">RESTful Java Programming</h1>
                                 </div>
                               </div>
                             </div>
                             <!-- Skill Card END -->
                             <!-- Skill Card -->
-                            <div class="element-item admin col-sm-3" data-category="admin">
-                              <div class="panel panel-default text-center clickable" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-title mt20">
-                                  <i class="devicon-mysql-plain sm-card-icon"></i>
+                            <div class="element-item dev col-sm-3 col-lg-2" data-category="dev">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading android">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/android.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Android Development Fundamentals</h1>
                                 </div>
-                                <div class="panel-body">
-                                  <h4>MySQL Administration</h4>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item dev col-sm-3 col-lg-2" data-category="dev">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading android">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/android.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Android UI Design</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading android">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/android.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Advanced Android Development</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading android">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/android.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Android High Performance Programming</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading android">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/android.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Android Studio Basics</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading git">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/git.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Git Fundamentals</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item admin col-sm-3 col-lg-2" data-category="admin">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading jira">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/jira.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Jira Administration</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading docker">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/docker.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">Docker Fundamentals</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            
+                            <!-- Skill Card -->
+                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading mysql">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/mysql.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">MySQL Basics</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item admin col-sm-3 col-lg-2" data-category="admin">
+                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading mysql">
+                                    <div class="col-sm-12 text-center pl0 pr0 mb15">
+                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/mysql.png"/>
+                                    </div>
+                                    <h1 class="sm-card-heading">MySQL Administration</h1>
                                 </div>
                               </div>
                             </div>
@@ -413,6 +413,7 @@
                           </div>
                         </div>
                   </div><!-- row -->
+                </div>
 			</div><!-- /#book-wrapper -->
 		</div><!-- /#page-content-wrapper -->
 	</div><!-- /#wrapper -->

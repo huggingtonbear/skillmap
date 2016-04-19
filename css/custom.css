@@ -710,11 +710,9 @@ span.input-group-btn button.btn {
   margin-right: 10px;
 }
 .tech-icon-sm {
-  height:40px;
-  margin-top: 15px;
+  height:60px;
+  width: auto;
   padding: 5px;
-  float: left;
-  margin-right: 10px;
 }
 .card-heading {
   margin-top: 15px;
@@ -723,10 +721,10 @@ span.input-group-btn button.btn {
   margin-bottom: 20px;
 }
 .sm-card-heading {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .left-skillcard li {
   list-style-position: outside;
@@ -755,11 +753,27 @@ span.input-group-btn button.btn {
 
 .django {
   border:none;
-  border-left: 15px solid #092e20 !important;
+  border-left: 15px solid #40684A !important;
 }
 .java {
   border:none;
   border-left: 10px solid #2962B0  !important;
+}
+.docker {
+  border:none;
+  border-left: 10px solid #46b0e7  !important;
+}
+.jira {
+  border:none;
+  border-left: 10px solid #205081  !important;
+}
+.android {
+  border:none;
+  border-left: 10px solid #9ACA42  !important;
+}
+.git {
+  border:none;
+  border-left: 10px solid #f05033  !important;
 }
 .ni-progress {
   border:dashed 2px #ccc;
@@ -790,4 +804,7 @@ span.input-group-btn button.btn {
   text-decoration: none;
   color: #677280;
   background: rgba(0,0,0,0.1);
+}
+.panel-heading>.img-thumbnail,.modal-header>.img-thumbnail,.panel-heading>.col-sm-12>.img-thumbnail {
+  border:3px solid rgba(47, 47, 47, 0.19)
 }
