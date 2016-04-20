@@ -58,9 +58,10 @@
 
 /* Sidebar Styles */
 .sub-nav a {
-    text-indent: 45px;
     font-size: 12px !important;
-    line-height: 30px;
+    line-height: 18px;
+    background: #596573;
+    text-indent: 35px;
 }
 
 .sidebar-nav {
@@ -74,6 +75,16 @@
 .sidebar-nav li {
     text-indent: 25px;
     line-height: 35px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.sidebar-nav .nav-pills li {
+    border-bottom: none;
+}
+.sidebar-nav .nav-pills .active a{
+    background:#465261;
+}
+.sidebar-nav .nav-pills a{
+    background:#596573;
 }
 .sidebar-nav h4 {
     color: white;
@@ -85,7 +96,9 @@
     display: block;
     text-decoration: none;
     color: #fff;
-    font-size: 13px;
+    font-size: 14px;
+    padding: 8px;
+    font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
