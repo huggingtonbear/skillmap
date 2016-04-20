@@ -80,7 +80,7 @@
 .sidebar-nav .nav-pills li {
     border-bottom: none;
 }
-.sidebar-nav .nav-pills .active a{
+.sidebar-nav .nav-pills .active a, .sidebar-nav .nav-pills .active a:focus{
     background:#465261;
 }
 .sidebar-nav .nav-pills a{
