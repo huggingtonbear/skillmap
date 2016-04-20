@@ -633,10 +633,6 @@ blockquote p {
     -moz-box-shadow: inset -3px 1px 9px -4px #ABABAB;
     -o-box-shadow: inset -3px 1px 9px -4px #ABABAB;
 }
-.sidenav-menu-holder {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding: 8px;
-}
 .sidenav-menu {
   font-weight: 300;
   font-size: 16px;
