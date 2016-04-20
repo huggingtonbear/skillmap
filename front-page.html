@@ -182,27 +182,70 @@
                     <div class="row">
                         
                         <div class="col-sm-9">
-                            <h4>Explore and master modern JavaScript techniques in order to build large-scale web applications</h4>
-                            <h1 class="mt30 mb30"> Description</h1>
-                            <p>JavaScript is a high-level, dynamic, untyped, lightweight, and interpreted programming language. Along with HTML and CSS, it is one of the three essential technologies of World Wide Web content production, and is an open source and cross-platform technology. The majority of websites employ JavaScript, and it is well supported by all modern web browsers without plugins. However, the JavaScript landscape has changed dramatically in recent years, and you need to adapt to the new world of JavaScript that people now expect. Mastering modern JavaScript techniques and the toolchain are essential to develop web-scale applications.
-                            </p>
-                            <p>Mastering JavaScript will be your companion as you master JavaScript and build innovative web applications. To begin with, you will get familiarized with the language constructs and how to make code easy to organize. You will gain a concrete understanding of variable scoping, loops, and best practices on using types and data structures, as well as the coding style and recommended code organization patterns in JavaScript. The book will also teach you how to use arrays and objects as data structures. You will graduate from intermediate-level skills to advanced techniques as you come to understand crucial language concepts and design principles. You will learn about modern libraries and tools so you can write better code.
-                            </p>
-                            <p>By the end of the book, you will understand how reactive JavaScript is going to be the new paradigm.</p>
-                            <h1 class="mt30 mb30">What you will learn</h1>
-                            <ul>
-                                <li>Get a run through of the basic JavaScript language constructs</li>
-                                <li>Get familiar with the Functions and Closures of JavaScript</li>
-                                <li>Explore Regular Expressions in JavaScript</li>
-                                <li>Code using the powerful object-oriented feature in JavaScript</li>
-                                <li>Test and debug your code using JavaScript strategies</li>
-                                <li>Master DOM manipulation, cross-browser strategies, and ES6</li>
-                                <li>Understand the basic concurrency constructs in Javascript and best performance strategies</li>
-                                <li>Learn to build scalable server application in JavaScript using Node.js</li>
-                            </ul>
-                            <h1 class="mt30 mb30">Authors</h1>
-                            <h4>Ved Antani</h4>
-                            <p>Ved Antani is an AVP (engineering) at Myntra. Before Myntra, he worked with Electronic Arts, NetApp, and Oracle. Ved is passionate about programming and has been programming in JavaScript since 2005. He has extensive experience in building scalable systems and mobile applications. Ved is a minimalist, a father, and an avid tea drinker.</p>
+                            <div class="row">
+                                <ul id="myTabs" class="nav nav-pills nav-justified hidden-xs" role="tablist">
+                                    <li class="active">
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Course features</a>
+                                    </li>
+                                    <li>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">What you'll learn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false">Find out more</a>
+                                    </li>
+                                    <li>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">About the Author</a>
+                                    </li>
+                                </ul>
+
+                                <div id="myTabContent" class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active pt30" id="about" aria-labelledby="about-tab">
+                                    <div class="visible-xs">
+                                        <h4 class="mobile-title">Course Features</h4>
+                                        <hr>
+                                    </div>
+                                        <div ng-bind-html="book_data.about" class="ng-binding"><ul>
+                <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
+                <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
+                <li>Build models relating to neural networks, prediction and deep prediction</li>
+                </ul></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade pt30" id="learn" aria-labelledby="learn-tab">
+                                        <div class="visible-xs">
+                                            <h4 class="mobile-title">What you'll learn</h4>
+                                            <hr>
+                                        </div>
+                                        <div ng-bind-html="book_data.learn" class="ng-binding"><ul>
+                <li>Set up the R package H2O to train deep learning models</li>
+                <li>Understand the core concepts behind deep learning models</li>
+                <li>Use Autoencoders to identify anomalous data or outliers</li>
+                <li>Predict or classify data automatically using deep neural networks</li>
+                <li>Build generalizable models using regularization to avoid overfitting the training data</li>
+                </ul></div>
+                                    </div> 
+                                    <div role="tabpanel" class="tab-pane fade pt30" id="detail" aria-labelledby="detail-tab">
+                                        <div class="visible-xs">
+                                            <h4 class="mobile-title">Find out more</h4>
+                                            <hr>
+                                        </div>
+                                        <div ng-bind-html="book_data.detail" class="ng-binding"><p>Deep learning is a branch of machine learning based on a set of algorithms that attempt to model high-level abstractions in data by using model architectures. With the superb memory management and the full integration with multi-node big data platforms, the H2O engine has become more and more popular among data scientists in the field of deep learning.</p>
+                <p>This book will introduce you to the deep learning package H2O with R and help you understand the concepts of deep learning. We will start by setting up important deep learning packages available in R and then move towards building models related to neural networks, prediction, and deep prediction, all of this with the help of real-life examples.</p>
+                <p>After installing the H2O package, you will learn about prediction algorithms. Moving ahead, concepts such as overfitting data, anomalous data, and deep prediction models are explained. Finally, the book will cover concepts relating to tuning and optimizing models.</p></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade pt30" id="author" aria-labelledby="author-tab">
+                                        <div class="visible-xs">
+                                            <h4 class="mobile-title">About the Author</h4>
+                                            <hr>
+                                        </div>
+                                        <p><strong class="ng-binding">Dr. Joshua F. Wiley</strong></p>
+                                        <div ng-bind-html="book_data.author_description" class="ng-binding"><p>Dr. Joshua F. Wiley is a lecturer at Monash University and a senior partner at Elkhart Group Limited, a statistical consultancy. He earned his PhD from the University of California, Los Angeles. His research focuses on using advanced quantitative methods to understand the complex interplays of psychological, social, and physiological processes in relation to psychological and physical health. In statistics and data science, Joshua focuses on biostatistics and is interested in reproducible research and graphical displays of data and statistical models. Through consulting at Elkhart Group Limited and his former work at the UCLA Statistical Consulting Group, Joshua has helped a wide array of clients, ranging from experienced researchers to biotechnology companies. He develops or codevelops a number of R packages including varian, a package to conduct Bayesian scale-location structural equation models, and MplusAutomation, a popular package that links R to the commercial Mplus software.</p></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="text-center col-sm-12 mb35">
+                                    <small class="ng-binding">ISBN 9781785280580 © Packt Publishing Limited. All Rights Reserved </small>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-sm-3">
                             <a href="index.html"><img src="http://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/4709_1341OS_Mastering JavaScript.jpg" class="img-responsive"></a>
