@@ -750,23 +750,29 @@ span.input-group-btn button.btn {
   width: 100%;
 }
 .sm-card>.panel-heading {
-  display: table-cell;
-  vertical-align: middle;
-  height: 173px;
-  width: 500px;
+  height: 175px;
+}
+.inner-card-sm {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .python {
   border:none;
-  border-left: 15px solid #2b5b84 !important;
+  border-left: 10px solid #2b5b84 !important;
 }
 .mysql {
   border:none;
-  border-left: 15px solid #f8981d !important;
+  border-left: 10px solid #f8981d !important;
 } 
 
 .django {
   border:none;
-  border-left: 15px solid #40684A !important;
+  border-left: 10px solid #40684A !important;
 }
 .java {
   border:none;
