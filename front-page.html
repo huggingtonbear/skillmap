@@ -89,7 +89,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <ul id="toc" class="nav nav-tabs mt15" role="tablist">
+                <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
                     <li class="active ml15" style="text-indent: 0px;">
                         <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
                     </li>
@@ -99,7 +99,7 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
+                        <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
                             <div class="input-group">
                                <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="Search this title...">
                                <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
