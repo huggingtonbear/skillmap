@@ -202,25 +202,28 @@
                       <div class="col-sm-9 col-lg-5 col-xl-6">
                           <ul id="recommendationTabs" class="nav nav-pills nav-stacked text-center mt25 mb25 visible-xs" role="tablist">
                               <li class="active">
-                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular Courses</a>
+                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular</a>
                               </li>
                               <li>
                                   <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">New</a>
                               </li>
                               <!-- ngIf: userRecommendations -->
                           </ul>
-                          <ul id="recommendationTabs" class="nav nav-tabs hidden-xs" role="tablist">
+                          <ul id="recommendationTabs" class="nav nav-pills nav-justified hidden-xs" role="tablist">
                               <li class="active">
-                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular <span class="hidden-md">Courses</span></a>
+                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular <span class="hidden-md"></span></a>
                               </li>
                               <li class="">
                                   <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">New</a>
+                              </li>
+                              <li class="">
+                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">Recommended</a>
                               </li>
                               <li>
                                   <!-- ngIf: userRecommendations -->
                               </li>
                           </ul>
-                          <div class="tab-content">
+                          <div class="tab-content mt15">
                               <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
                                   <div class="panel panel-default tabbed-content">
                                       <ul class="list-group">
