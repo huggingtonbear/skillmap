@@ -630,6 +630,7 @@ blockquote p {
 .sidenav-menu {
   font-weight: 300;
   font-size: 15px;
+  float: left;
 }
 /* Hiding the Icons for the sidenav */
 .sidenav-menu-holder i {
