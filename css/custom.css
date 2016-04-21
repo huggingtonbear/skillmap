@@ -748,6 +748,10 @@ span.input-group-btn button.btn {
 .sm-card>.panel-heading {
   height: 175px;
 }
+.element-item.owned {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
 .inner-card-sm {
   padding-left: 0px;
   padding-right: 0px;
