@@ -169,13 +169,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="https://www.packtpub.com">Store</a></li>
-                        <li class="dropdown"> 
+                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
+                        <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -186,7 +186,7 @@
                             <li><a href="#">View Subscriptions</a></li> 
                             <li><a href="#">View Licences</a></li> 
                             <li role="separator" class="divider"></li> 
-                            <li><a href="index-lo.html">Logout</a></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
                         </ul> 
                     </li>
                     </ul>
@@ -194,7 +194,7 @@
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
                               <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
                             </div>
                         </div>
                     </form>
@@ -205,7 +205,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <ul id="toc" class="nav nav-tabs mt15" role="tablist">
+                <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
                     <li class="active ml15" style="text-indent: 0px;">
                         <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
                     </li>
@@ -215,24 +215,28 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15">
-                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
+                        <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
+                            <div class="input-group">
+                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="Search this title...">
+                               <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
+                            </div>
                         </form>
                         <div class="clearfix"></div>
-                        <li><a href="front-page.html">Learning C++ by Creating Games with UE4</a></li>
+                        <li></li>
+                        <li><a href="front-page.html" class="incomplete-section">Mastering JavaScript</a></li>
                         <li><a href="#" class="completed-section">Preface</a></li>
                         <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
                         <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
-                        <li class="active"><a href="index.html">3. Looping</a></li> 
-                        <li class="sub-nav"><a href="for-loop.html">The for loop</a></li>
+                        <li class="active"><a href="index.html" class="incomplete-section">3. Looping</a></li> 
+                        <li class="sub-nav"><a href="for-loop.html" class="incomplete-section">The for loop</a></li>
                         <li class="sub-nav"><a href="#" class="completed-section">The for/while loop</a></li>
-                        <li class="sub-nav"><a href="#">The 'if' loop</a></li>
-                        <li class="sub-nav"><a href="#">Looping with Unreal Engine</a></li>
-                        <li><a href="#">4. Forms and Entries</a></li>
-                        <li><a href="#">5. Functions and Macros</a></li>
-                        <li><a href="#">6. Dynamic Memory Allocation</a></li>
-                        <li><a href="#">7. If, Else and Switch</a></li>
-                        <li><a href="#">8. Actors and Roles</a></li>
+                        <li class="sub-nav"><a href="#" class="incomplete-section">The 'if' loop</a></li>
+                        <li class="sub-nav"><a href="#" class="incomplete-section">Looping with Unreal Engine</a></li>
+                        <li><a href="#" class="incomplete-section">4. Forms and Entries</a></li>
+                        <li><a href="#" class="incomplete-section">5. Functions and Macros</a></li>
+                        <li><a href="#" class="incomplete-section">6. Dynamic Memory Allocation</a></li>
+                        <li><a href="#" class="incomplete-section">7. If, Else and Switch</a></li>
+                        <li><a href="#" class="incomplete-section">8. Actors and Roles</a></li>
                     </div>
                     <div role="tabpanel" class="tab-pane fade pt15" id="bookmark" aria-labelledby="bookmark-tab"> 
                         <li><a href="#" class="completed-section">Preface</a></li>
@@ -245,53 +249,91 @@
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="book-page ng-scope">
+          <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1>The for loop</h1>
+                    
+
+                    <ol class="breadcrumb title-buttons row mt0">
+                      <li class="mt5"><a href="#" class="mr5"><i class="fa fa-bookmark-o fa-lg"></i><span class="hidden-xs ml5"> Bookmark</span></a></li>
+                      <li class="mt5">
+                        <div class="btn-group" role="group">
+                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-shopping-cart fa-lg"></i><span class="hidden-xs ml5"> Buy eBook</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="big-data-and-business-intelligence/r-deep-learning-essentials" target="_self">Buy from Store</a>
+                                </li>
+                                <li ng-show="tokens_available > 0" ng-if="login_status == true" class="ng-scope">
+                                    <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                </li>
+                                <li role="separator" class="divider ng-scope" ng-if="login_status == true"></li>
+                                <li class="disabled ng-scope" ng-if="login_status == true">
+                                    <a href="#">You have <strong class="ng-binding">4</strong> Token(s) Remaining</a>
+                                </li>
+                            </ul>
+                        </div>
+                      <li class="mt5"><a href="#" class=""><i class="fa fa-moon-o fa-lg"></i></a></li>
+                      <li class="mt5">
+                        <div class="btn-group" role="group">
+                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-font fa-lg"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li class="disabled"><a class="disabled text-center"><b>Font Size (rem)</b></a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">1.5 </a></li>
+                              <li><a href="#">1.6</a></li>
+                              <li><a href="#">1.7</a></li>
+                              <li><a href="#">1.8</a></li>
+                              <li><a href="#">1.9</a></li>
+                              <li><a href="#">2.0</a></li>
+                            </ul>
+                        </div>
+                      </li>
+                      <li class="mt5">
+                        <div class="btn-group" role="group">
+                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-share fa-lg"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li class="disabled"><a class="disabled text-center"><b>Share</b></a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Facebook </a></li>
+                              <li><a href="#">Email</a></li>
+                              
+                              <li><a href="#">Tweet</a></li>
+                              <li><a href="#">Reddit</a></li>
+                            </ul>
+                        </div>
+
+                    </ol>
+                  </div>
+
+                </div>
+            </div>
 
     <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="reader-container col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-scope">
+                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                     
-                    <div class="row">
-                        <div class="btn-group mb10" role="group">
-                                <button href="#" class="btn btn-default"><i class="fa fa-bookmark-o fa-lg mr5"></i> <span class="hidden-xs">Bookmark</span></button>
-                                 <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-download fa-lg mr5"></i><span class="hidden-xs"> Download eBook</span>
-                                      <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">Download ePub</a></li>
-                                      <li><a href="#">Download PDF</a></li>
-                                      <li><a href="#">Download Mobi</a></li>
-                                    </ul>
-                                  </div>
-                                <a href="index-li-ns-nm.html" class="btn nightmode-toggle btn-default"><i class="fa fa-moon-o fa-lg  mr5"></i><span class="hidden-xs"> Nightmode</span></a> 
-                                <button type="button" class="btn btn-default"><i class="fa fa-font fa-lg mr5"></i><span class="hidden-xs"> Font Size</span></button>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-share fa-lg mr5"></i><span class="hidden-xs"> Share</span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#"><i class="fa fa-facebook fa-lg mr15"></i> Share to Facebook </a></li>
-                                      <li><a href="#"><i class="fa fa-envelope fa-lg mr10"></i> Email</a></li>
-                                      
-                                      <li><a href="#"><i class="fa fa-twitter fa-lg mr15"></i>Tweet</a></li>
-                                      <li><a href="#"><i class="fa fa-reddit fa-lg mr10"></i>Post to Reddit</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
+                    <div class="">
+                            
                         <div style="position:relative;" class="book-content" ng-non-bindable="">
                                 <div class="packtlib-version v2"><!--?xml version="1.0" encoding="UTF-8"?-->
-                                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Creating our first view</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch03lvl1sec27"></a>Creating our first view</h2></div></div><hr></div><p>Now that <a id="id89" class="indexterm"></a>we have created our URL and interpreted by the routing system, we must ensure that a view (which is a controller in the MVC pattern) meets the customer's demand.</p><p>This is the function of the second parameter of the URLs present in <code class="literal">urls.py</code>. This parameter will define the method that will play the role of a view. Take, for example, our first URL: </p><div class="informalexample"><pre class="programlisting  language-markup">url (r'^$', 'TasksManager.views.index.page'), </pre></div><p>Firstly, as we have seen when studying regular expressions, this URL will be valid only if we browse the <code class="literal">http://localhost:8000</code> URL. The second parameter in the URL means that in the <code class="literal">index.py</code> file, there is a method called <code class="literal">page</code> that will process the request. In our <code class="literal">index.py</code> file, we will create a method called <code class="literal">page()</code>. This method will return an HTML page<a id="id91" class="indexterm"></a> to the client. The page is being returned by the HTTP protocol, so we will use the <code class="literal">HttpResponse()</code> function and its importation. The argument of this <code class="literal">HttpResponse()</code> function returns the HTML content that we will return<a id="id92" class="indexterm"></a> to the browser. To simplify reading this example, we do not use a proper HTML structure, because we just return <code class="literal">Hello world!</code> to the client, as shown in the following code:</p>    </div>
-                                    </div><div class="fade_out"></div>                                                          </div>
+                                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Creating our first view</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div></div></div></div><p>Now that <a id="id89" class="indexterm"></a>we have created our URL and interpreted by the routing system, we must ensure that a view (which is a controller in the MVC pattern) meets the customer's demand.</p><p>This is the function of the second parameter of the URLs present in <code class="literal">urls.py</code>. This parameter will define the method that will play the role of a view. Take, for example, our first URL: </p><div class="informalexample"><pre class="programlisting  language-markup">url (r'^$', 'TasksManager.views.index.page'), </pre></div><p>Firstly, as we have seen when studying regular expressions, this URL will be valid only if we browse the <code class="literal">http://localhost:8000</code> URL. The second parameter in the URL means that in the <code class="literal">index.py</code> file, there is a method called <code class="literal">page</code> that will process the request. In our <code class="literal">index.py</code> file, we will create a method called <code class="literal">page()</code>. This method will return an HTML page<a id="id91" class="indexterm"></a> to the client. The page is being returned by the HTTP protocol, so we will use the <code class="literal">HttpResponse()</code> function and its importation. The argument of this <code class="literal">HttpResponse()</code> function returns the HTML content that we will return<a id="id92" class="indexterm"></a> to the browser. To simplify reading this example, we do not use a proper HTML structure, because we just return <code class="literal">Hello world!</code> to the client, as shown in the following code:</p>    </div>
+                                    </div><div class="fade-out"></div>                                                          </div>
                                     <div class="panel panel-default clearfix">
                                         <div class="panel-body">
                                             <div class="col-sm-6 col-lg-8">
                                                 <h4>Sorry! You've used up your free access to premium content</h4>
-                                            <h5><b>Don't worry! Subscribe today and access the entire library for just $12.99 a month</b>
+                                            <h5><b>Don't worry! Subscribe today and access over 3,500 titles for just $12.99 a month</b>
                                             </h5>
                                             
                                             </div>
                                             <div class="col-sm-6 col-lg-4">
-                                                <a class="btn btn-success btn-lg btn-block mt10" href="/books/subscription/packtlib" data-toggle="modal" data-target="#myModal">Start your FREE month</a>
+                                                <a class="btn btn-primary btn-lg btn-block mt10" href="https://www.packtpub.com/add_to_cart/23569">Start your FREE 10 Day Trial</a>
                                             </div>
                                             
                                         </div>
