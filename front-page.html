@@ -176,37 +176,71 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
                 <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                     <div class="row">
+
+                    <div class="col-sm-12">
                         
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <ul id="myTabs" class="nav nav-pills nav-justified hidden-xs" role="tablist">
+                        <div class="">
+                             <div class="col-sm-3">
+                                <a href="front-page.html"><img src="images/book1.jpg" class="img-responsive hidden-xs"></a>
+                            </div>
+                            <div class="col-sm-9">
+                                
+
+                            <p class="mt20 mb20"><b>Learn the hot new front-end web framework from Facebook: ReactJS, an easy way of developing the V in MVC and a better approach to software engineering in functional JavaScript</b></p>
+                            <a href="index.html" class="btn btn-info btn-lg pull-right">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                            <div class="clearfix"></div>
+
+                            </div>
+                            <div class="col-sm-12">
+                                
+                                <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt20" role="tablist">
                                     <li class="active">
-                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Course features</a>
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true"><h5>Features</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">What you'll learn</a>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Learning</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false">Find out more</a>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false"><h5>About</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">About the Author</a>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Author</h5></a>
+                                    </li>
+                                </ul>
+                                <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
+                                    <li class="active">
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Features</a>
+                                    </li>
+                                    <li>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">Learning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">Author</a>
                                     </li>
                                 </ul>
 
-                                <div id="myTabContent" class="tab-content">
-                                    <div role="tabpanel" class="tab-pane fade in active pt30" id="about" aria-labelledby="about-tab">
-                                    <div class="visible-xs">
-                                        <h4 class="mobile-title">Course Features</h4>
-                                        <hr>
-                                    </div>
-                                        <div ng-bind-html="book_data.about" class="ng-binding"><ul>
-                <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
-                <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
-                <li>Build models relating to neural networks, prediction and deep prediction</li>
-                </ul></div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="learn" aria-labelledby="learn-tab">
+                                <div id="myTabContent" class="tab-content pt30">
+                                    
+                                    <div role="tabpanel" class="tab-pane fade in active" id="about" aria-labelledby="about-tab">
+                                       
+                                        <div class="">
+                                            <div class="visible-xs">
+                                                <h4 class="mobile-title">Course Features</h4>
+                                                <hr>
+                                            </div>
+                                            <div ng-bind-html="book_data.about" class="ng-binding">
+                                                <ul>
+                                                <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
+                                                <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
+                                                <li>Build models relating to neural networks, prediction and deep prediction</li>
+                                                </ul>
+                                        </div>
+                                            </div>
+                                        </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="learn" aria-labelledby="learn-tab">
                                         <div class="visible-xs">
                                             <h4 class="mobile-title">What you'll learn</h4>
                                             <hr>
@@ -219,7 +253,7 @@
                 <li>Build generalizable models using regularization to avoid overfitting the training data</li>
                 </ul></div>
                                     </div> 
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="detail" aria-labelledby="detail-tab">
+                                    <div role="tabpanel" class="tab-pane fade" id="detail" aria-labelledby="detail-tab">
                                         <div class="visible-xs">
                                             <h4 class="mobile-title">Find out more</h4>
                                             <hr>
@@ -228,7 +262,7 @@
                 <p>This book will introduce you to the deep learning package H2O with R and help you understand the concepts of deep learning. We will start by setting up important deep learning packages available in R and then move towards building models related to neural networks, prediction, and deep prediction, all of this with the help of real-life examples.</p>
                 <p>After installing the H2O package, you will learn about prediction algorithms. Moving ahead, concepts such as overfitting data, anomalous data, and deep prediction models are explained. Finally, the book will cover concepts relating to tuning and optimizing models.</p></div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="author" aria-labelledby="author-tab">
+                                    <div role="tabpanel" class="tab-pane fade" id="author" aria-labelledby="author-tab">
                                         <div class="visible-xs">
                                             <h4 class="mobile-title">About the Author</h4>
                                             <hr>
@@ -237,23 +271,16 @@
                                         <div ng-bind-html="book_data.author_description" class="ng-binding"><p>Dr. Joshua F. Wiley is a lecturer at Monash University and a senior partner at Elkhart Group Limited, a statistical consultancy. He earned his PhD from the University of California, Los Angeles. His research focuses on using advanced quantitative methods to understand the complex interplays of psychological, social, and physiological processes in relation to psychological and physical health. In statistics and data science, Joshua focuses on biostatistics and is interested in reproducible research and graphical displays of data and statistical models. Through consulting at Elkhart Group Limited and his former work at the UCLA Statistical Consulting Group, Joshua has helped a wide array of clients, ranging from experienced researchers to biotechnology companies. He develops or codevelops a number of R packages including varian, a package to conduct Bayesian scale-location structural equation models, and MplusAutomation, a popular package that links R to the commercial Mplus software.</p></div>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="text-center col-sm-12 mb35">
+                                
+                                
+                            </div>
+                                
+                                <div class="text-center col-sm-12 mb35 mt40">
+                                    <hr>
                                     <small class="ng-binding">ISBN 9781785280580 © Packt Publishing Limited. All Rights Reserved </small>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <a href="index.html"><img src="http://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/4709_1341OS_Mastering JavaScript.jpg" class="img-responsive"></a>
-                            <a href="index.html" class="btn btn-primary btn-block btn-lg mt20">Continue</a>
-                            <a href="index.html" class="btn btn-default btn-block btn-lg mt10 visible-xs"><i class="fa fa-plus fa-lg mr5"></i> Collection</a>
-                            <h3>Details</h3>
-                            <p><b>Author(s):</b> Ved Antani</p>
-                            <p><b>Release Date:</b> January 2016</p>
-                            <p><b>ISBN 13:</b> 9781783983704</p>
-                            <p><b>Time to Complete:</b> 10 hours 26 minutes</p>
-                        </div>
-                        
+                        </div> 
                     </div>
                 </div>
             </div>
