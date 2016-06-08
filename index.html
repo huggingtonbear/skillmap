@@ -45,7 +45,7 @@
     <div id="wrapper">
 
         <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -55,11 +55,10 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
@@ -79,7 +78,7 @@
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
                               <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
+                              
                             </div>
                         </div>
                     </form>
@@ -101,10 +100,7 @@
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
                         <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
-                            <div class="input-group">
                                <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="Search this title...">
-                               <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
-                            </div>
                         </form>
                         <div class="clearfix"></div>
                         <li></li>
