@@ -22,21 +22,17 @@
     z-index: 1000;
     position: fixed;
     left: 250px;
-    top: 50px;
+    top: 64px;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #465261;
+    background: #222;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    /*box-shadow: inset -3px 1px 9px -4px #ABABAB;
-    -webkit-box-shadow: inset -3px 1px 9px -4px #ABABAB;
-    -moz-box-shadow: inset -3px 1px 9px -4px #ABABAB;
-    -o-box-shadow: inset -3px 1px 9px -4px #ABABAB;*/
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -45,9 +41,7 @@
 
 #page-content-wrapper {
     width: 100%;
-    /*top: 50px; removed for SP*/
     position: absolute;
-    /*padding: 15px; removed for SP*/
     padding: 0px;
 }
 
@@ -57,12 +51,7 @@
 }
 
 /* Sidebar Styles */
-.sub-nav a {
-    font-size: 12px !important;
-    line-height: 18px;
-    background: #596573;
-    text-indent: 35px;
-}
+
 
 .sidebar-nav {
     position: absolute;
@@ -73,34 +62,59 @@
 }
 .sidebar-nav li {
     text-indent: 25px;
-    line-height: 35px;
-/*    border-bottom: 1px solid rgba(0,0,0,0.1);
-*/}
-.sidebar-nav .nav-pills li {
+    line-height: 45px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+li.sub-nav {
     border-bottom: none;
 }
-.sidebar-nav .nav-pills .active a, .sidebar-nav .nav-pills .active a:focus{
-    background:#465261;
+.sub-nav a {
+    font-size: 12px !important;
+    line-height: 1.8em;
+    background: rgba(0,0,0,0.4);
+    border-bottom: none;
+    text-indent: 35px;
 }
-.sidebar-nav .nav-pills a{
-    background:#596573;
+.active.sub-nav a {
+    background: #F9953D;
 }
 .sidebar-nav h4 {
-    color: white;
+    color: #FFF;
 }
 .sidebar-nav hr {
     border-top: 1px solid rgba(255,255,255,0.2);
 }
+.toc-tab {
+    border-bottom: none !important;
+    text-indent: 0px !important;
+}
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #BBBBBB;
     font-size: 14px;
     padding: 8px;
-    font-weight: 300;
+    font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.active a#contents-tab, .active a#bookmark-tab {
+    background: #222;
+}
+a#bookmark-tab, a#contents-tab {
+    background: #333;
+}
+.sidebar-nav li.active a {
+    color:white;
+}
+.sidenav-menu {
+  font-weight: 500;
+  font-size: 14px;
+  float: left;
+}
+.sidenav-menu i {
+    text-indent: 0;
 }
 .sidenav-menu-holder {
     padding-top: 14px !important;
@@ -108,7 +122,7 @@
 }
 .sidebar-nav li a:hover {
     text-decoration: none;
-    background: rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.2);
 }
 
 .sidebar-nav li a:active,
@@ -117,7 +131,7 @@
 }
 
 .sidebar-nav .active {
-    background: rgba(0,0,0,0.1);
+    background: #505050;
 }
 
 .sidebar-nav > .sidebar-brand {

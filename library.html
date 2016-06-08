@@ -82,7 +82,7 @@
     <div id="wrapper">
 
         <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -92,11 +92,10 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo active" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/mapt.png"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
@@ -116,7 +115,7 @@
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
                               <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
+                              
                             </div>
                         </div>
                     </form>
@@ -127,12 +126,11 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Continue</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Create a New Plan  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a>    </li>
+                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Course Library</span><span class="pull-right mr5"></span></a>    </li>
+                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6</span></a>    </li>
+                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved Courses </span><span class="pull-right mr5">12</span></a>    </li>
+                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7</span></a>    </li>
             </ul>
         </div>
 
@@ -142,17 +140,17 @@
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1>Library</h1>
+                    <h1>Course Library</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Courses</li>
+                      <li class="active mt5">All Courses</li>
                     </ol>
                   </div>
                 </div>
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
-                  <div class="col-sm-12">
-                      <div class="col-sm-3 col-lg-3 col-xl-2">
+                  <div class="">
+                      <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
                         <div class="panel panel-default">
                           <!-- Default panel contents -->
                           <div class="panel-heading"><h4 class="panel-title">Browse Topics</h4></div>
@@ -189,348 +187,266 @@
                           </ul>
                         </div> 
                       </div>
-                      <div class="col-sm-9 col-xl-4 col-lg-4">
-                          <div ng-show="last_viewed.title" class="panel panel-default">
-                              <div class="panel-heading">
-                                  <h3 class="panel-title">You last viewed:</h3>
-                              </div>
-                              <div class="panel-body">
-                                  <strong ng-bind-html="last_viewed.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
-                                  <p><small ng-bind-html="last_viewed.sub_title" class="ng-binding">Explore and master the advanced features of Django to build professional, manageable web applications</small></p>
-                                  <p ng-show="last_viewed.section_title" class="ng-hide"><strong>Last section:</strong> <span ng-bind-html="last_viewed.section_title" class="ng-binding"></span></p>
-                              </div>
-                              <div class="panel-footer text-right">
-                                  <a href="index.html" class="btn btn-primary">Continue</a>
-                              </div>
-                          </div>
-                          <!-- ngIf: free_tokens || sub --><ol class="breadcrumb hidden-xs ng-scope" ng-if="free_tokens || sub">
-                              <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
-                          </ol><!-- end ngIf: free_tokens || sub -->
-
-                          <!-- ngIf: sub && !freetrial --><div class="panel panel-default ng-scope" ng-if="sub &amp;&amp; !freetrial">
-                              <div class="panel-heading">
-                                  <h3 class="panel-title">Monthly Progress Tracker:</h3>
-                              </div>
-                              <div class="panel-body">
-                                  <h4 class="lg-title"><strong class="ng-binding">0</strong> Section(s) Completed<small class="pull-right ng-binding">25</small></h4>
-                                  <div class="progress">
-                                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                          <span class="sr-only ng-binding">0% Complete (success)</span>
-                                      </div>
-                                  </div>
-                                  <h4 class="lg-title"><strong class="ng-binding">0</strong>hr(s) <strong class="ng-binding">0 </strong>min(s) spent learning<small class="pull-right ng-binding">4hrs</small></h4>
-                                  <div class="progress">
-                                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                          <span class="sr-only ng-binding">0% Complete (success)</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="panel-footer">
-                                  <small>You will receive a Course token when you spend more than 4 hours learning in a month and complete 25 sections. Each Course token can be redeemed for any eBook or Video from the library.</small>
-                              </div>
-                          </div><!-- end ngIf: sub && !freetrial -->
-                      </div>
-                      <div class="col-sm-9 col-lg-5 col-xl-6">
+                      <div class="col-sm-9 col-lg-7 col-xl-8">
                           <ul id="recommendationTabs" class="nav nav-pills nav-stacked text-center mt25 mb25 visible-xs" role="tablist">
                               <li class="active">
-                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular</a>
+                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Trending</a>
                               </li>
                               <li>
-                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">New</a>
+                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">Latest Additions</a>
                               </li>
-                              <!-- ngIf: userRecommendations -->
                           </ul>
-                          <ul id="recommendationTabs" class="nav nav-pills nav-justified hidden-xs" role="tablist">
+                          <ul id="recommendationTabs" class="nav nav-tabs nav-justified hidden-xs" role="tablist">
                               <li class="active">
-                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular <span class="hidden-md"></span></a>
+                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Trending</h5></a>
                               </li>
                               <li class="">
-                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">New</a>
+                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();libraryController.getFiveRecent($event);" aria-expanded="false"><h5>Latest additions</h5></a>
                               </li>
                               <li class="">
-                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">Recommended</a>
-                              </li>
-                              <li>
-                                  <!-- ngIf: userRecommendations -->
+                                  <a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope"><h5>Recommended</h5></a>
                               </li>
                           </ul>
                           <div class="tab-content mt15">
                               <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
-                                  <div class="panel panel-default tabbed-content">
+                                  <div class="tabbed-content">
                                       <ul class="list-group">
-                                          <!-- ngRepeat: (key, fivePopular) in fivePopular --><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Practical Machine Learning</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
-                                                  <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Sunila Gollapudi</small>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <a href="index.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Practical Machine Learning</h1>
+                                              <p class="mb5">By Sunila Gollapudi</p>
+                                                <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small><!-- ngIf: fivePopular.field_date_of_publication[0].value --><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fivePopular.field_date_of_publication[0].value -->
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fivePopular) in fivePopular --><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Drupal 8</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
-                                                  <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Nick Abbott</small>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Drupal 8</h1>
+                                              <p class="mb5">By Nick Abbott</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small><!-- ngIf: fivePopular.field_date_of_publication[0].value --><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fivePopular.field_date_of_publication[0].value -->
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fivePopular) in fivePopular --><a ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Mastering JavaScript</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
-                                                  <!-- ngSwitchWhen: learning -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering --><span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Ved Antani</small>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book3.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering JavaScript</h1>
+                                              <p class="mb5">By Ved Antani</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small><!-- ngIf: fivePopular.field_date_of_publication[0].value --><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fivePopular.field_date_of_publication[0].value -->
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fivePopular) in fivePopular --><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Predictive Analytics with Python</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
-                                                  <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Ashish Kumar</small>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Predictive Analytics with Python</h1>
+                                              <p class="mb5">By Ashish Kumar</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small><!-- ngIf: fivePopular.field_date_of_publication[0].value --><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope">Feb 2016</small><!-- end ngIf: fivePopular.field_date_of_publication[0].value -->
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fivePopular) in fivePopular --><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
-                                                  <!-- ngSwitchWhen: learning -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering --><span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Kevin Veroneau </small>
-                                              <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>1 hour</small><!-- ngIf: fivePopular.field_date_of_publication[0].value --><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fivePopular.field_date_of_publication[0].value -->
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering Django Web Development [Video]</h1>
+                                              <p class="mb5">By Kevin Veroneau </p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fivePopular) in fivePopular -->
+                                          </li>
                                       </ul>
                                   </div>
                               </div>
 
                               <div role="tabpanel" class="tab-pane fade" id="new" aria-labelledby="new-tab">
-                                  <div class="panel panel-default tabbed-content">
+                                  <div class="tabbed-content">
                                       <ul class="list-group">
-                                          <!-- ngRepeat: (key, fiveRecent) in fiveRecent --><a ng-repeat="(key, fiveRecent) in fiveRecent" href="index.html" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fiveRecent.title" class="ng-binding">Learning Scrapy</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fiveRecent.ss_cck_field_book_series">
-                                                  <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Dimitrios Kouzis-Loukas</small>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book3.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering JavaScript</h1>
+                                              <p class="mb5">By Ved Antani</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                                
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>8 hours 06 minutes</small><!-- ngIf: fiveRecent.ss_cck_field_date_of_publication --><small ng-if="fiveRecent.ss_cck_field_date_of_publication" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fiveRecent.ss_cck_field_date_of_publication -->
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fiveRecent) in fiveRecent --><a ng-repeat="(key, fiveRecent) in fiveRecent" href="/packtlib/book/Big-Data-and-Business-Intelligence/9781784391010" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fiveRecent.title" class="ng-binding">Elasticsearch Essentials</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fiveRecent.ss_cck_field_book_series">
-                                                  <!-- ngSwitchWhen: learning -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="essentials">Learner</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Bharvi Dixit</small>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Predictive Analytics with Python</h1>
+                                              <p class="mb5">By Ashish Kumar</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>7 hours 12 minutes</small><!-- ngIf: fiveRecent.ss_cck_field_date_of_publication --><small ng-if="fiveRecent.ss_cck_field_date_of_publication" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fiveRecent.ss_cck_field_date_of_publication -->
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fiveRecent) in fiveRecent --><a ng-repeat="(key, fiveRecent) in fiveRecent" href="/packtlib/book/Web-Development/9781785886775" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fiveRecent.title" class="ng-binding">Web Development with Django Cookbook - Second Edition</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fiveRecent.ss_cck_field_book_series">
-                                                  <!-- ngSwitchWhen: learning -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook --><span class="badge-build badge pull-right ng-scope" ng-switch-when="cookbook">Projects</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Aidas Bendoraitis</small>
-                                              <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>11 hours 31 minutes</small><!-- ngIf: fiveRecent.ss_cck_field_date_of_publication --><small ng-if="fiveRecent.ss_cck_field_date_of_publication" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fiveRecent.ss_cck_field_date_of_publication -->
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering Django Web Development [Video]</h1>
+                                              <p class="mb5">By Kevin Veroneau </p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fiveRecent) in fiveRecent --><a ng-repeat="(key, fiveRecent) in fiveRecent" href="/packtlib/book/Big-Data-and-Business-Intelligence/9781785882371" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fiveRecent.title" class="ng-binding">Splunk Developer's Guide - Second Edition</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fiveRecent.ss_cck_field_book_series">
-                                                  <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Kyle Smith</small>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <a href="index.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Practical Machine Learning</h1>
+                                              <p class="mb5">By Sunila Gollapudi</p>
+                                                <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>5 hours 42 minutes</small><!-- ngIf: fiveRecent.ss_cck_field_date_of_publication --><small ng-if="fiveRecent.ss_cck_field_date_of_publication" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fiveRecent.ss_cck_field_date_of_publication -->
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fiveRecent) in fiveRecent --><a ng-repeat="(key, fiveRecent) in fiveRecent" href="/packtlib/book/Application-Development/9781785282584" class="list-group-item list-name ng-scope">
-                                              <strong ng-bind-html="fiveRecent.title" class="ng-binding">Building a Recommendation Engine with Scala</strong>
-                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fiveRecent.ss_cck_field_book_series">
-                                                  <!-- ngSwitchWhen: learning -->
-                                                  <!-- ngSwitchWhen: beginners guide -->
-                                                  <!-- ngSwitchWhen: mastering -->
-                                                  <!-- ngSwitchWhen: essentials -->
-                                                  <!-- ngSwitchWhen: blueprints -->
-                                                  <!-- ngSwitchWhen: cookbook -->
-                                                  <!-- ngSwitchWhen: by example -->
-                                                  <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
-                                              </span><br>
-                                              <small class="pull-left ng-binding">By Saleem Ansari</small>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Drupal 8</h1>
+                                              <p class="mb5">By Nick Abbott</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
                                               <br>
-                                              <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>4 hours 55 minutes</small><!-- ngIf: fiveRecent.ss_cck_field_date_of_publication --><small ng-if="fiveRecent.ss_cck_field_date_of_publication" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: fiveRecent.ss_cck_field_date_of_publication -->
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </a><!-- end ngRepeat: (key, fiveRecent) in fiveRecent -->
+                                          </li>
                                       </ul>
                                   </div>
                               </div>
 
                               <div role="tabpanel" class="tab-pane fade" id="recommended" aria-labelledby="recommended-tab">
-                                  <!-- ngIf: userRecommendations -->
-                              </div>
-
-                          </div>
-                      </div>
-                      <div class="col-sm-9 col-lg-9 col-xl-10">
-                          <h3 class="mt5 pull-left">Trending Skills </h3><a href="select-skills.html" class="btn btn-default pull-right"> View All Skills</a>
-                          <div class="clearfix"></div>
-                          <hr>
-                          
-                          <div class="grid row">
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-xl-2" data-category="program">
-                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                      <div class="col-sm-12 inner-card-sm">
-                                        <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
-                                        <h1 class="sm-card-heading">Python Fundamentals</h1>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-xl-2" data-category="program">
-                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="col-sm-12 inner-card-sm">
-                                      <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">High Performance Python</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-xl-2" data-category="program">
-                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="col-sm-12 inner-card-sm">
-                                      <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">Unlocking Python Objects</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3 col-xl-2" data-category="dev">
-                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="col-sm-12 inner-card-sm">
-                                      <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">Testing Python</h1>
+                                  <div class="tabbed-content">
+                                      <ul class="list-group">
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering Django Web Development [Video]</h1>
+                                              <p class="mb5">By Kevin Veroneau </p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this </small></p>
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <a href="index.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Practical Machine Learning</h1>
+                                              <p class="mb5">By Sunila Gollapudi</p>
+                                                <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                                 
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                              <br>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Drupal 8</h1>
+                                              <p class="mb5">By Nick Abbott</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
+                                              <br>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book3.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering JavaScript</h1>
+                                              <p class="mb5">By Ved Antani</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
+                                              <br>
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Predictive Analytics with Python</h1>
+                                              <p class="mb5">By Ashish Kumar</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
+                                              <br>
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                      </ul>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3 col-xl-2" data-category="tech">
-                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="col-sm-12 inner-card-sm">
-                                      <img class="tech-icon-sm img-thumbnail" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">Data Analysis with Python</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-xl-2" data-category="program">
-                              <div class="panel panel-default  text-center clickable sm-card" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading django">
-                                    <div class="col-sm-12 inner-card-sm">
-                                      <img class="tech-icon-sm img-thumbnail" src="images/tech/django.png"/>
-                                      <h1 class="sm-card-heading">Production Ready Django</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            
+
                           </div>
 
                       </div>
                     </div>
                 </div><!-- row -->
+      </div>
 			</div><!-- /#book-wrapper -->
 		</div><!-- /#page-content-wrapper -->
 	</div><!-- /#wrapper -->
