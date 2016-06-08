@@ -44,7 +44,7 @@
     <div id="wrapper">
 
         <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -54,11 +54,10 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo active" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
@@ -78,7 +77,7 @@
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
                               <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
+                              
                             </div>
                         </div>
                     </form>
@@ -89,16 +88,16 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Continue</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Create a New Plan  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a>    </li>
+                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Course Library</span><span class="pull-right mr5"></span></a>    </li>
+                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6</span></a>    </li>
+                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved Courses </span><span class="pull-right mr5">12</span></a>    </li>
+                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7</span></a>    </li>
             </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
+
 
         <div id="page-content-wrapper" class="">
             <div class="jumbotron heading">
@@ -114,8 +113,8 @@
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
-                  <div class="col-sm-12">
-                      <div class="col-sm-3 col-lg-3 col-xl-2">
+                  <div class="">
+                      <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
                         <div class="panel panel-default">
                           <!-- Default panel contents -->
                           <div class="panel-heading"><h4 class="panel-title">Browse Topics</h4></div>
@@ -152,118 +151,187 @@
                           </ul>
                         </div> 
                       </div>
-                        <div class="col-sm-9 col-lg-9 col-xl-5">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Latest JavaScript Courses</h3>
-                                </div>
-                                <ul class="list-group">
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3145OS_cov.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
-                                                <small class="pull-left">By Luke Skywalker</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 5hrs 30min</small><small class="pull-right mr10">Jan 2015</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3602OS_0.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Death Star Development with Civil 3D</strong><span class="badge-master badge hidden-xs">Master</span><br/>
-                                                <small class="pull-left">By Sarah Connors</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 4hrs 10min</small><small class="pull-right mr10">Feb 2011</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2209OS_jQuery%20UI%201.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Beginning Pod Racing</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
-                                                <small class="pull-left">By Jon Snow</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 2hrs 6min</small><small class="pull-right mr10">Mar 2013</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Mastering the Dark Side</strong><span class="badge-build badge hidden-xs pull-right">Build</span><br/>
-                                                <small class="pull-left">By Han Solo + Leia Organa</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 10hrs 46min</small><small class="pull-right mr10">Aug 2015</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/6709_jQuery%20for%20Designers_cov.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Freezing people in Carbonite for Beginners [Video]</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
-                                                <small class="pull-left">By Obi Wan Kenobi</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 3hrs 5min</small><small class="pull-right mr10">Dec 2010</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                        </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-9 col-lg-9 col-xl-5">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Most Popular JavaScript Courses</h3>
-                                </div>
-                                <ul class="list-group">
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3145OS_cov.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
-                                                <small class="pull-left">By Luke Skywalker</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 5hrs 30min</small><small class="pull-right mr10">Jan 2015</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3602OS_0.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Death Star Development with Civil 3D</strong><span class="badge-master badge hidden-xs">Master</span><br/>
-                                                <small class="pull-left">By Sarah Connors</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 4hrs 10min</small><small class="pull-right mr10">Feb 2011</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2209OS_jQuery%20UI%201.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Beginning Pod Racing</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
-                                                <small class="pull-left">By Jon Snow</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 2hrs 6min</small><small class="pull-right mr10">Mar 2013</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Mastering the Dark Side</strong><span class="badge-build badge hidden-xs pull-right">Build</span><br/>
-                                                <small class="pull-left">By Han Solo + Leia Organa</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 10hrs 46min</small><small class="pull-right mr10">Aug 2015</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                            <a href="front-page.html" class="list-group-item list-name">
-                                                <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/6709_jQuery%20for%20Designers_cov.jpg" class="cover-image-thumb"/>-->
-                                                <strong>Freezing people in Carbonite for Beginners [Video]</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
-                                                <small class="pull-left">By Obi Wan Kenobi</small>
-                                                <br/>
-                                                <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 3hrs 5min</small><small class="pull-right mr10">Dec 2010</small>
-                                                <div class="clearfix">
-                                                </div>
-                                            </a>
-                                        </ul>
-                            </div>
-                            </div>
-                        
+                      <div class="col-sm-9 col-lg-7 col-xl-8">
+                          <ul id="recommendationTabs" class="nav nav-pills nav-stacked text-center mt25 mb25 visible-xs" role="tablist">
+                              <li class="active">
+                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Trending</a>
+                              </li>
+                              <li>
+                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">Latest Additions</a>
+                              </li>
+                          </ul>
+                          <ul id="recommendationTabs" class="nav nav-tabs nav-justified hidden-xs" role="tablist">
+                              <li class="active">
+                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Trending</h5></a>
+                              </li>
+                              <li class="">
+                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();libraryController.getFiveRecent($event);" aria-expanded="false"><h5>Latest additions</h5></a>
+                              </li>
+                          </ul>
+                          <div class="tab-content mt15">
+                              <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
+                                  <div class="tabbed-content">
+                                      <ul class="list-group">
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <a href="index.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Practical Machine Learning</h1>
+                                              <p class="mb5">By Sunila Gollapudi</p>
+                                                <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                              <br>
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Drupal 8</h1>
+                                              <p class="mb5">By Nick Abbott</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
+                                              <br>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book3.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering JavaScript</h1>
+                                              <p class="mb5">By Ved Antani</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
+                                              <br>
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Predictive Analytics with Python</h1>
+                                              <p class="mb5">By Ashish Kumar</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
+                                              <br>
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering Django Web Development [Video]</h1>
+                                              <p class="mb5">By Kevin Veroneau </p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
 
+                              <div role="tabpanel" class="tab-pane fade" id="new" aria-labelledby="new-tab">
+                                  <div class="tabbed-content">
+                                      <ul class="list-group">
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book3.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering JavaScript</h1>
+                                              <p class="mb5">By Ved Antani</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                                
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
+                                              <br>
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Predictive Analytics with Python</h1>
+                                              <p class="mb5">By Ashish Kumar</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
+                                              <br>
+                                              
+                                              <a href="front-page.html" class="btn btn-info pull-right btn-lg">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering Django Web Development [Video]</h1>
+                                              <p class="mb5">By Kevin Veroneau </p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <a href="index.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Practical Machine Learning</h1>
+                                              <p class="mb5">By Sunila Gollapudi</p>
+                                                <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                              <br>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Drupal 8</h1>
+                                              <p class="mb5">By Nick Abbott</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
+                                              <br>
+                                              
+                                              <a href="index.html" class="btn btn-info pull-right btn-lg">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+
+                              
+
+                          </div>
+
+                      </div>
                     </div>
-                </div>
+                </div><!-- row -->
             </div>
         </div>
     </div>
